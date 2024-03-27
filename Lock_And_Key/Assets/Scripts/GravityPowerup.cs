@@ -10,17 +10,17 @@ public class GravityPowerup : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnTriggerEnter2D(Collider2D collision) {
         // Debug.Log("Some Collision detected");
         if (collision.gameObject.tag == "Player") {
             Debug.Log("Player Collision detected");
-            collision.rigidbody.gravityScale = 2;
+            collision.attachedRigidbody.gravityScale = 2;
             StartCoroutine(gravityEffect(collision));
         }
     }
 
-    IEnumerator gravityEffect(Collision2D collision) {
+    IEnumerator gravityEffect(Collider2D collision) {
           yield return new WaitForSeconds(10f);
-          collision.rigidbody.gravityScale = 1;
+          collision.attachedRigidbody.gravityScale = 1;
      }
 }
