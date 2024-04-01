@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerBetterFall : MonoBehaviour {
 
-      public float fallMultiplier = 2.5f;
-      public float lowJumpMultiplier = 2f;
+      public float fallMultiplier = 10f;
+      public float lowJumpMultiplier = 5f;
       Rigidbody2D rb;
 
       void Awake(){

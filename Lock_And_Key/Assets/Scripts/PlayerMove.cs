@@ -59,6 +59,6 @@ public class PlayerMove : MonoBehaviour {
       }
 
       public void increasedSpeed() {
-            runSpeed = 50f;
+            runSpeed = 20f;
       }
 }
