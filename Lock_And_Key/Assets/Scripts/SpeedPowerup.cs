@@ -16,8 +16,9 @@ public class SpeedPowerup : MonoBehaviour
         // Debug.Log("Some Collision detected");
         if (collision.gameObject.tag == "Player") {
             Debug.Log("Player Collision detected");
-            movementScript = collision.gameObject.GetComponent<PlayerMove>();
-            movementScript.runSpeed = 50f;
+            //movementScript = collision.gameObject.GetComponent<PlayerMove>();
+            //movementScript.runSpeed = 50f;
+            collision.gameObject.GetComponent<PlayerMove>().increasedSpeed();
             StartCoroutine(speedDelay());
             movementScript.runSpeed = 10f;
         }
