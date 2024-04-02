@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 530938817112665014}
   - component: {fileID: 8735505736429271267}
+  - component: {fileID: 246276601546081598}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8735505736429271267
 MonoBehaviour:
@@ -44,3 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9019937673b9342fb8fdf0abcbd4c41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  viewHiddenOn: 0
+  speedOn: 0
+  selectedPower: viewhidden
+--- !u!114 &246276601546081598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224968718690795967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26efae437d1a34069a8207ab259333a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InventoryMenu: {fileID: 0}
+  InvIsOpen: 0
+  item1image: {fileID: 0}
+  item2image: {fileID: 0}
+  item1Text: {fileID: 0}
+  item2Text: {fileID: 0}
