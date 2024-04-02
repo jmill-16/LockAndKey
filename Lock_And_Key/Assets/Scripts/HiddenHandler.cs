@@ -23,10 +23,12 @@ public class HiddenHandler : MonoBehaviour
       }
 
       public void Update() {
+        //hiddenObj.SetActive(true);
         if (hiddenObj) {
             if (gameHandler.viewHiddenOn) {
                 //Debug.Log("turning on");
                 hiddenObj.SetActive(true);
+                //Debug.Log("turned on");
             } else {
                 //Debug.Log("turning off");
                 hiddenObj.SetActive(false);

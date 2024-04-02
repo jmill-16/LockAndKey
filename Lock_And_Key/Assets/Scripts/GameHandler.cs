@@ -20,6 +20,7 @@ public class GameHandler : MonoBehaviour
     }
 
     public void Update() {
+        //Debug.Log("view hidden: " + viewHiddenOn);
         //toggle selected power on and off
         if (Input.GetKeyDown("o")) {
             //Debug.Log("o pressed");
