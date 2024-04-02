@@ -10,12 +10,15 @@ public class PlayerMove : MonoBehaviour {
       public float runSpeed = 10f;
       public float startSpeed = 10f;
       public bool isAlive = true;
+
+      AudioSource audioSourse;
       //public AudioSource WalkSFX;
       private Vector3 hMove;
 
       void Start(){
            //animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
+           audioSourse = GetComponent<AudioSource>();
       }
 
       void Update(){
@@ -25,11 +28,16 @@ public class PlayerMove : MonoBehaviour {
                   transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
 
                   if (Input.GetAxis("Horizontal") != 0){
+                        if(!audioSourse.isPlaying)
+                        {
+                              audioSourse.Play();
+                        }
                   //       animator.SetBool ("Walk", true);
                   //       if (!WalkSFX.isPlaying){
                   //             WalkSFX.Play();
                   //      }
                   } else {
+                        audioSourse.Stop();
                   //      animator.SetBool ("Walk", false);
                   //      WalkSFX.Stop();
                   }
@@ -39,6 +47,18 @@ public class PlayerMove : MonoBehaviour {
                         playerTurn();
                   }
            }
+
+      //      if(rb2D.velocity.x != 0)
+      //      {
+      //             if(!audioSourse.isPlaying)
+      //             {
+      //                   audioSourse.Play();
+      //             }
+      //      }
+      //      else
+      //      {
+      //             audioSourse.Stop();
+      //      }
       }
 
       void FixedUpdate(){
