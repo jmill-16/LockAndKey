@@ -14,7 +14,11 @@ public class GameHandler : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("IntroCutscene");
+    }
+
+    public void StartLevel1() {
+        SceneManager.LoadScene("Level1Dungeon");
     }
 
     public void Credits() {
