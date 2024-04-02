@@ -41,6 +41,10 @@ public class GameHandler : MonoBehaviour
         SceneManager.LoadScene("Level1Dungeon");
     }
 
+     public void StartTutorial() {
+        SceneManager.LoadScene("TutorialCell");
+    }
+
     public void Credits() {
         SceneManager.LoadScene("Credits");
     }
