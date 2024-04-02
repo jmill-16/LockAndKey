@@ -7,10 +7,29 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour
 {
     private string sceneName;
+
+    //Powers
+    public bool viewHiddenOn = false;
+    public bool speedOn = false;
+
+    public string selectedPower = "viewhidden";
     // Start is called before the first frame update
     void Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
+    }
+
+    public void Update() {
+        //toggle selected power on and off
+        if (Input.GetKeyDown("o")) {
+            //Debug.Log("o pressed");
+            //Debug.Log("view hidden: " + viewHiddenOn);
+            if (selectedPower == "viewhidden") {
+                viewHiddenOn = !viewHiddenOn;
+            } else if (selectedPower == "speed") {
+                speedOn = !speedOn;
+            }
+        }
     }
 
     public void StartGame() {
