@@ -21,15 +21,15 @@ public class PlayerJump : MonoBehaviour {
       }
 
      void Update() {
-            if ((IsGrounded()) || (jumpTimes <= 1)){
+            if ((IsGrounded()) && (jumpTimes <= 1)){
             // if ((IsGrounded()) && (jumpTimes <= 1)){ // for single jump only
                   canJump = true;
-            }  else if (jumpTimes > 1){
+            }  else {
             // else { // for single jump only
                   canJump = false;
             }
 
-           if ((Input.GetButtonDown("Jump")) && (canJump) && (isAlive == true)) {
+            if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && (canJump) && (isAlive == true)) {
                   Jump();
             }
       }
@@ -45,8 +45,8 @@ public class PlayerJump : MonoBehaviour {
       }
 
       public bool IsGrounded() {
-            Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 2f, groundLayer);
-            Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
+            Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, groundLayer);
+            Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 0.5f, enemyLayer);
             if ((groundCheck != null) || (enemyCheck != null)) {
                   //Debug.Log("I am trouching ground!");
                   jumpTimes = 0;
