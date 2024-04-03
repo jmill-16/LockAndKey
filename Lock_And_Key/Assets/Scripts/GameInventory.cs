@@ -9,8 +9,8 @@ public class GameInventory : MonoBehaviour {
       public bool InvIsOpen = false;
 
       //5 Inventory Items:
-      public static bool hiddenpowerbool = true;
-      public static bool speedpowerbool = false;
+      public bool hiddenpoweravail = true;
+      public bool secondpoweravail;
     //   public static bool item2bool = false;
     //   public static bool item3bool = false;
     //   public static bool item4bool = false;
@@ -41,8 +41,16 @@ public class GameInventory : MonoBehaviour {
 
       // Crafting buttons. Uncomment and add for each button:
       // public GameObject buttonCraft1; // weapon1 creation
+
+
+      //Selected boxes
+      public GameObject item1selected;
+      public GameObject item2selected;
+
+      public GameHandler gameHandler;
  
       void Start(){
+            gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
             InventoryMenu.SetActive(false);
             //CraftMenu.SetActive(false);
             InventoryDisplay();
@@ -54,11 +62,44 @@ public class GameInventory : MonoBehaviour {
             OpenCloseInventory();
             //InventoryDisplay();
         }
+        if (Input.GetKeyDown("u") && secondpoweravail) {
+            if (gameHandler.selectedHiddenPower) {
+                  gameHandler.viewHiddenOn = false;
+                  gameHandler.selectedHiddenPower = false;
+
+                  if (gameHandler.levelPower == "speed") {
+                        gameHandler.speedOn = true;
+                  } else if (gameHandler.levelPower == "reversegravity") {
+                        gameHandler.reverseGravityOn = true;
+                  }
+            } else {
+                  gameHandler.viewHiddenOn = true;
+                  gameHandler.selectedHiddenPower = true;
+
+                  if (gameHandler.levelPower == "speed") {
+                        gameHandler.speedOn = false;
+                  } else if (gameHandler.levelPower == "reversegravity") {
+                        gameHandler.reverseGravityOn = false;
+                  }
+            }
+        }
       }
 
       void InventoryDisplay(){
-            if (hiddenpowerbool == true) {item1image.SetActive(true);} else {item1image.SetActive(false);}
-            if (speedpowerbool == true) {item2image.SetActive(true);} else {item2image.SetActive(false);}
+            if (hiddenpoweravail == true) {item1image.SetActive(true);} else {item1image.SetActive(false);}
+            if (secondpoweravail == true) {item2image.SetActive(true);} else {item2image.SetActive(false);}
+            
+            if (gameHandler.selectedHiddenPower) {
+                  item1selected.SetActive(true);
+                  item2selected.SetActive(false);
+            }
+            else {
+                  item1selected.SetActive(false);
+                  if (secondpoweravail) {
+                        item2selected.SetActive(true);
+                  }
+            }
+
             // if (item3bool == true) {item3image.SetActive(true);} else {item3image.SetActive(false);}
             // if (item4bool == true) {item4image.SetActive(true);} else {item4image.SetActive(false);}
             // if (item5bool == true) {item5image.SetActive(true);} else {item5image.SetActive(false);}
@@ -85,8 +126,8 @@ public class GameInventory : MonoBehaviour {
 
       public void InventoryAdd(string item){
             string foundItemName = item;
-            if (foundItemName == "item1") {hiddenpowerbool = true;}
-            else if (foundItemName == "item2") {speedpowerbool = true;}
+            if (foundItemName == "item1") {hiddenpoweravail = true;}
+            else if (foundItemName == "item2") {secondpoweravail = true;}
             // else if (foundItemName == "item3") {item3bool = true; item3num ++;}
             // else if (foundItemName == "item4") {item4bool = true; item4num ++;}
             // else if (foundItemName == "item5") {item5bool = true; item5num ++;}
@@ -101,13 +142,13 @@ public class GameInventory : MonoBehaviour {
       public void InventoryRemove(string item){
             string itemRemove = item;
             if (itemRemove == "item1") {
-                hiddenpowerbool = false;
+                hiddenpoweravail = false;
                 //   item1num -= num;
                 //   if (item1num <= 0) { item1bool =false; }
                   // Add any other intended effects: new item crafted, speed boost, slow time, etc
              }
             else if (itemRemove == "item2") {
-                  speedpowerbool =false;
+                  secondpoweravail =false;
                   // Add any other intended effects
              }
             // else if (itemRemove == "item3") {
@@ -147,8 +188,8 @@ public class GameInventory : MonoBehaviour {
 
       // Reset all static inventory values on game restart.
       public void ResetAllInventory(){
-            hiddenpowerbool = true;
-            speedpowerbool = false;
+            hiddenpoweravail = true;
+            secondpoweravail = false;
             // item3bool = false;
             // item4bool = false;
             // item5bool = false;

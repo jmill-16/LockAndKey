@@ -686,6 +686,9 @@ MonoBehaviour:
   item2image: {fileID: 1049279528}
   item1Text: {fileID: 2126686622}
   item2Text: {fileID: 995548288}
+  item1selected: {fileID: 1875033571}
+  item2selected: {fileID: 1657202315}
+  gameHandler: {fileID: 0}
 --- !u!114 &995548288 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5924197853555714375, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
@@ -1191,6 +1194,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1657202315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6019558888873373225, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
+  m_PrefabInstance: {fileID: 6444384047070190344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1756935531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7993705532410676799, guid: e09aaf5a15ba7a1429c8adfaae9cb01f, type: 3}
@@ -1326,6 +1334,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09aaf5a15ba7a1429c8adfaae9cb01f, type: 3}
+--- !u!1 &1875033571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7927171682082108273, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
+  m_PrefabInstance: {fileID: 6444384047070190344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1885797306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7993705532410676799, guid: e09aaf5a15ba7a1429c8adfaae9cb01f, type: 3}
@@ -1698,7 +1711,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameHandler
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8735505736429271267, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
+      propertyPath: levelPower
+      value: speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735505736429271267, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
+      propertyPath: reverseGravityOn
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 246276601546081598, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

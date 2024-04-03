@@ -12,10 +12,15 @@ public class GameHandler : MonoBehaviour
     public bool viewHiddenOn = false;
     public bool speedOn = false;
 
-    public string selectedPower = "viewhidden";
+    public bool reverseGravityOn = false;
+
+    public string levelPower;   //make "speed", "reversegravity"
+
+    public bool selectedHiddenPower;
     // Start is called before the first frame update
     void Start()
     {
+        selectedHiddenPower = true;
         sceneName = SceneManager.GetActiveScene().name;
     }
 
@@ -25,10 +30,16 @@ public class GameHandler : MonoBehaviour
         if (Input.GetKeyDown("o")) {
             //Debug.Log("o pressed");
             //Debug.Log("view hidden: " + viewHiddenOn);
-            if (selectedPower == "viewhidden") {
+            if (selectedHiddenPower) {
+                //Debug.Log("hidden");
                 viewHiddenOn = !viewHiddenOn;
-            } else if (selectedPower == "speed") {
-                speedOn = !speedOn;
+            } else {
+                //Debug.Log("not hidden");
+                if (levelPower == "speed") {
+                    speedOn = !speedOn;
+                } else if (levelPower == "reversegravity") {
+                    reverseGravityOn = !reverseGravityOn;
+                }
             }
         }
     }
