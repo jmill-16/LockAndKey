@@ -17,10 +17,13 @@ public class GameHandler : MonoBehaviour
     public string levelPower;   //make "speed", "reversegravity"
 
     public bool selectedHiddenPower;
+
+    public bool canOpenDoor;
     // Start is called before the first frame update
     void Start()
     {
         selectedHiddenPower = true;
+        canOpenDoor = false;
         sceneName = SceneManager.GetActiveScene().name;
     }
 

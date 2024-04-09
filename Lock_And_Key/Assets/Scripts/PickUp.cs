@@ -16,6 +16,8 @@ public class PickUp : MonoBehaviour{
 
       public bool currentVisible = false;
 
+      public bool keyToDoor;
+
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
             //gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -25,11 +27,17 @@ public class PickUp : MonoBehaviour{
 
       public void OnTriggerEnter2D (Collider2D other){
             if (other.gameObject.tag == "Player"){
-                if (gameHandler.viewHiddenOn) {
-                  GetComponent<Collider2D>().enabled = false;
-                  //GetComponent< AudioSource>().Play();
-                  StartCoroutine(DestroyThis());
-                }
+                  if (hiddenObject) {
+                        if (gameHandler.viewHiddenOn) {
+                              GetComponent<Collider2D>().enabled = false;
+                              if (keyToDoor) {
+                                    Debug.Log("can open true");
+                                    gameHandler.canOpenDoor = true;
+                              }
+                              //GetComponent< AudioSource>().Play();
+                              StartCoroutine(DestroyThis());
+                        }
+                  }
             }
       }
 

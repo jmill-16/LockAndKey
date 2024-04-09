@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialCell.unity
     guid: 75999cafc5041fc409aaa1da04aef41a
+  - enabled: 1
+    path: Assets/Scenes/TutorialHiddenPower.unity
+    guid: ffa0aafe1ef164b67afc035757d63b9f
   m_configObjects: {}
