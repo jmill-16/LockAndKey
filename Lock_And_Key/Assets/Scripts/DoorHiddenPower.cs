@@ -32,12 +32,12 @@ public class DoorExit_Items : MonoBehaviour
         }
     }
 
-      void Update(){
-            if (gameHandler.canOpenDoor){
-                //Debug.Log("door available");
-                  gameObject.GetComponent<Collider2D>().enabled = true;
-            }
-      }
+    //   void Update(){
+    //         if (gameHandler.canOpenDoor){
+    //             //Debug.Log("door available");
+    //               gameObject.GetComponent<Collider2D>().enabled = true;
+    //         }
+    //   }
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
