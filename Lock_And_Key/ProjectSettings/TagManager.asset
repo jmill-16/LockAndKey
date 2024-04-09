@@ -8,6 +8,8 @@ TagManager:
   - PauseMenuSlider
   - Enemy
   - Hidden
+  - PurpleArrow
+  - BlueArrow
   layers:
   - Default
   - TransparentFX

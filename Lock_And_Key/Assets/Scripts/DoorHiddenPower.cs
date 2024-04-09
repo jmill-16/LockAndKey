@@ -16,7 +16,7 @@ public class DoorExit_Items : MonoBehaviour{
 
       void Update(){
             if (gameHandler.canOpenDoor){
-                Debug.Log("door available");
+                //Debug.Log("door available");
                   gameObject.GetComponent<Collider2D>().enabled = true;
             }
             else {

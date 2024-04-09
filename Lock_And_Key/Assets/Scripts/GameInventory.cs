@@ -71,6 +71,8 @@ public class GameInventory : MonoBehaviour {
                         gameHandler.speedOn = true;
                   } else if (gameHandler.levelPower == "reversegravity") {
                         gameHandler.reverseGravityOn = true;
+                  } else if (gameHandler.levelPower == "colorview") {
+                        gameHandler.viewPurpleOn = true;
                   }
             } else {
                   gameHandler.viewHiddenOn = true;
@@ -80,6 +82,8 @@ public class GameInventory : MonoBehaviour {
                         gameHandler.speedOn = false;
                   } else if (gameHandler.levelPower == "reversegravity") {
                         gameHandler.reverseGravityOn = false;
+                  } else if (gameHandler.levelPower == "colorview") {
+                        gameHandler.viewPurpleOn = false;
                   }
             }
         }

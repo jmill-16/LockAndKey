@@ -14,6 +14,8 @@ public class GameHandler : MonoBehaviour
 
     public bool reverseGravityOn = false;
 
+    public bool viewPurpleOn = false;
+
     public string levelPower;   //make "speed", "reversegravity"
 
     public bool selectedHiddenPower;
@@ -42,6 +44,8 @@ public class GameHandler : MonoBehaviour
                     speedOn = !speedOn;
                 } else if (levelPower == "reversegravity") {
                     reverseGravityOn = !reverseGravityOn;
+                } else if (levelPower == "colorview") {
+                    viewPurpleOn = !viewPurpleOn;
                 }
             }
         }
