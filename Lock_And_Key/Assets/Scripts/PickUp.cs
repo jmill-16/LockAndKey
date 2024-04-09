@@ -5,6 +5,8 @@ using UnityEngine;
 public class PickUp : MonoBehaviour{
 
       public GameHandler gameHandler;
+      AudioSource audioSourseON;
+      AudioSource audioSourseOFF;
       //public playerVFX playerPowerupVFX;
       
 
@@ -20,6 +22,9 @@ public class PickUp : MonoBehaviour{
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
+            audioSourseON = GetComponent<AudioSource>();
+            audioSourseOFF = GetComponent<AudioSource>();
+
             //gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
             //playerPowerupVFX = GameObject.FindWithTag("Player").GetComponent<playerVFX>();
       }
@@ -29,6 +34,12 @@ public class PickUp : MonoBehaviour{
             if (other.gameObject.tag == "Player"){
                   if (hiddenObject) {
                         if (gameHandler.viewHiddenOn) {
+                              Debug.Log("view hidden on");
+                              if(!audioSourseOFF.isPlaying)
+                              {
+                                    audioSourseOFF.Play();
+                              }
+
                               GetComponent<Collider2D>().enabled = false;
                               if (keyToDoor) {
                                     Debug.Log("can open true");
@@ -36,8 +47,15 @@ public class PickUp : MonoBehaviour{
                               }
                               //GetComponent< AudioSource>().Play();
                               StartCoroutine(DestroyThis());
+                        } 
+                        if(!gameHandler.viewHiddenOn) {
+                              Debug.Log("view hidden off");
+                              // if(!audioSourseOFF.isPlaying)
+                              // {
+                              //       audioSourseOFF.Play();
+                              // }     
                         }
-                  }
+                  } 
             }
       }
 
