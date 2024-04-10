@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialHiddenPower.unity
     guid: ffa0aafe1ef164b67afc035757d63b9f
+  - enabled: 1
+    path: Assets/Scenes/ConnorWorkSpace.unity
+    guid: b2388e3f6f424bd48bc8f4d55289db27
+  - enabled: 1
+    path: Assets/Scenes/Level3Tutorial.unity
+    guid: b1547c6d4e5e344f8874146d90ba5b41
   m_configObjects: {}

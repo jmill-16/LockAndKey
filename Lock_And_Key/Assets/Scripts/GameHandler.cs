@@ -59,8 +59,16 @@ public class GameHandler : MonoBehaviour
         SceneManager.LoadScene("Level1Dungeon");
     }
 
+    public void ToTutHiddenPower() {
+        SceneManager.LoadScene("TutorialHiddenPower");
+    }
+
      public void StartTutorial() {
         SceneManager.LoadScene("TutorialCell");
+    }
+
+    public void ToLevel3() {
+        SceneManager.LoadScene("Level3Tutorial");
     }
 
     public void Credits() {
