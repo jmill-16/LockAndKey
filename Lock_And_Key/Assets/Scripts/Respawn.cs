@@ -11,6 +11,7 @@ public class Respawn : MonoBehaviour
     void Start()
     {
         spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
+        threshold = -10;
     }
 
     // Update is called once per frame
