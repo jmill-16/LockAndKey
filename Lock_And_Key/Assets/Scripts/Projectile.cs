@@ -12,9 +12,15 @@ public class Projectile : MonoBehaviour
 
     public PlayerMove playermove;
     public bool facingRight;
+
+
+    public int damage; 
+    public EnemyHealth enemyHealth;
+
     // Start is called before the first frame update
     void Start()
     {
+        damage = 10;
         projectileCount = projectileLife;
         playermove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
         facingRight = playermove.FaceRight;
@@ -50,7 +56,9 @@ public class Projectile : MonoBehaviour
         {
             if(collision.gameObject.tag == "Enemy")
             {
-                Destroy(collision.gameObject);
+                Debug.Log("take damage");
+                collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+                // Destroy(collision.gameObject);
             }
 
             Destroy(gameObject);
