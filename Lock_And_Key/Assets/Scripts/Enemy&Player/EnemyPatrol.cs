@@ -25,29 +25,34 @@ public class EnemyPatrol : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
-        Vector2 point = currentPoint.position - transform.position;
+        Vector3 point = currentPoint.position - transform.position;
         if(currentPoint == pointB.transform)
         {
+            // Debug.Log("B");
+            Debug.Log(Vector3.Distance(transform.position, currentPoint.position));
             rb.velocity = new Vector2(speed, 0);
         }
         else
         {
+            Debug.Log("A");
             rb.velocity = new Vector2(-speed, 0);
             audioSourse.Play();
         }
 
-        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+        if(Vector3.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
         {
+            Debug.Log("going to A");
             currentPoint = pointA.transform;
             if(!FaceLeft) {
                 flip();
             }
         }
-        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
+        if(Vector3.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
         {
+            Debug.Log("going to B");
             currentPoint = pointB.transform;
             if(FaceLeft) {
                 flip();
