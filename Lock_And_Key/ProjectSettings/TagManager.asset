@@ -11,6 +11,8 @@ TagManager:
   - PurpleArrow
   - BlueArrow
   - SpawnPoint
+  - FadingPlatform
+  - Gravity
   layers:
   - Default
   - TransparentFX
