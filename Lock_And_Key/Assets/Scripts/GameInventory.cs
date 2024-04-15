@@ -87,6 +87,10 @@ public class GameInventory : MonoBehaviour {
                   }
             }
         }
+
+        if (InvIsOpen) {
+            InventoryDisplay();
+        }
       }
 
       void InventoryDisplay(){
@@ -94,10 +98,12 @@ public class GameInventory : MonoBehaviour {
             if (secondpoweravail == true) {item2image.SetActive(true);} else {item2image.SetActive(false);}
             
             if (gameHandler.selectedHiddenPower) {
+                  //Debug.Log("here1");
                   item1selected.SetActive(true);
                   item2selected.SetActive(false);
             }
             else {
+                  //Debug.Log("here2");
                   item1selected.SetActive(false);
                   if (secondpoweravail) {
                         item2selected.SetActive(true);
@@ -181,7 +187,7 @@ public class GameInventory : MonoBehaviour {
 
       // Open and Close the Inventory. Use this function on a button next to the inventory bar.
       public void OpenCloseInventory(){
-            if (InvIsOpen){ InventoryMenu.SetActive(false); }
+            if (InvIsOpen){ InventoryMenu.SetActive(false);}
             else { InventoryMenu.SetActive(true); }
             InvIsOpen = !InvIsOpen;
       }
