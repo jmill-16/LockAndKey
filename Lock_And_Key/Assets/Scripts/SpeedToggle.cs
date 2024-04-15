@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpeedToggle : MonoBehaviour
 {
-
     public GameHandler gameHandler;
 
     public Camera cam;
