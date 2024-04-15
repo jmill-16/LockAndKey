@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class countdown : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class countdown : MonoBehaviour
     public GameObject timer;
     public GameObject player;
     public GameObject spawnPoint;
-    private Vector3 spawn = new Vector3(0,0,0);
+    public Vector3 spawn;
     public bool isRunning = false;
     public float timeLeft = 60f;
     // Start is called before the first frame update
@@ -17,7 +18,7 @@ public class countdown : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         timerWall = GameObject.FindWithTag("TimerWall");
-        spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
+        Debug.Log("x: " + spawn.x + "y: " + spawn.y + "z: " +  spawn.z);
     }
 
     // Update is called once per frame
@@ -28,7 +29,6 @@ public class countdown : MonoBehaviour
             timeLeft = Mathf.Round(timeLeft * 100.0f) * 0.01f;
             Text timerText = timer.GetComponent<Text>();
             timerText.text = "Time remaining: " + timeLeft;
-            Debug.Log(timeLeft);
             if(timeLeft <= 0f){
                 timerText.text = "Time remaining: 0";
                 player.transform.position = spawn;
@@ -36,6 +36,10 @@ public class countdown : MonoBehaviour
                 isRunning = false;
             }
         }
+
+        // if(timerWall.GetComponent<TilemapCollider2D>().enabled == true) {
+        //     Debug.Log("collider is still on");
+        // }
     }
 
     public void StartTimer() {

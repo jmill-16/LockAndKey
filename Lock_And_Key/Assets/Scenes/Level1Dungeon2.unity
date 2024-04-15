@@ -716,7 +716,7 @@ PrefabInstance:
       addedObject: {fileID: 243876106}
     - targetCorrespondingSourceObject: {fileID: 3224968718690795967, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 243876110}
+      addedObject: {fileID: 243876113}
   m_SourcePrefab: {fileID: 100100000, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
 --- !u!1 &243876105 stripped
 GameObject:
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9019937673b9342fb8fdf0abcbd4c41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &243876110
+--- !u!114 &243876113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -764,8 +764,9 @@ MonoBehaviour:
   timer: {fileID: 158367753}
   player: {fileID: 1549947654}
   spawnPoint: {fileID: 698901651}
+  spawn: {x: -7.5, y: -3.5, z: 0}
   isRunning: 0
-  timeLeft: 10
+  timeLeft: 60
 --- !u!1 &249628711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,7 +2019,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698901651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.9, y: -4.89, z: 0.10146818}
+  m_LocalPosition: {x: -7.52, y: -3.62, z: 0.10146818}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86577,7 +86578,7 @@ PrefabInstance:
     - target: {fileID: 3473417395366430014, guid: 7ccfa6a77e17a4a58855048a909d69f3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 243876110}
+      objectReference: {fileID: 243876113}
     - target: {fileID: 3473417395366430014, guid: 7ccfa6a77e17a4a58855048a909d69f3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
