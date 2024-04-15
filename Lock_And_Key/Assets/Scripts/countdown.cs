@@ -45,7 +45,7 @@ public class countdown : MonoBehaviour
     public void StartTimer() {
         if(isRunning == false){
             timerWall.SetActive(false);
-            timeLeft = 10f;
+            timeLeft = 60f;
             isRunning = true;
         }
     }

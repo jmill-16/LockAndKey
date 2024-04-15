@@ -13,6 +13,7 @@ TagManager:
   - SpawnPoint
   - FadingPlatform
   - Gravity
+  - TimerWall
   layers:
   - Default
   - TransparentFX
