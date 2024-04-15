@@ -744,6 +744,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1229691317}
     m_Modifications:
+    - target: {fileID: 274459451844041496, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1232769206}
+    - target: {fileID: 274459451844041496, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 636308852637248153, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1232769205}
+    - target: {fileID: 636308852637248153, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 892425654570347657, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -767,6 +783,26 @@ PrefabInstance:
     - target: {fileID: 3268216727939478652, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324573710829154022, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324573710829154022, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1232769206}
+    - target: {fileID: 5324573710829154022, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251515951936164046, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1232769205}
+    - target: {fileID: 7251515951936164046, guid: 361243963818145788b10f101a10d93a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
       objectReference: {fileID: 0}
     - target: {fileID: 8804613605390075671, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_Pivot.x
@@ -806,11 +842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8804613605390075671, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.71254
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8804613605390075671, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.71247
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8804613605390075671, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1230,7 +1266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 293, y: 271}
+  m_AnchoredPosition: {x: -561, y: 345}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688792642
@@ -2237,10 +2273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2838,11 +2874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4551545693782997628, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 263
+      value: 356
       objectReference: {fileID: 0}
     - target: {fileID: 4551545693782997628, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 207
+      value: -311
       objectReference: {fileID: 0}
     - target: {fileID: 4551545693782997628, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
