@@ -15,8 +15,13 @@ public class PickUp_Inventory: MonoBehaviour {
 
       void OnTriggerEnter2D(Collider2D other){
             if (other.gameObject.tag == "Player"){
-                  //Debug.Log("You found an" + ItemName);
-                  gameInventory.InventoryAdd(ItemName);
+                  Debug.Log("You found an" + ItemName);
+                  
+            if (gameInventory != null) {
+                gameInventory.InventoryAdd(ItemName);
+            } else {
+                Debug.LogWarning("GameInventory is not assigned.");
+            }
             }
       }
 }
