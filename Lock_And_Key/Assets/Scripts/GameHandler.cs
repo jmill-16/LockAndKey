@@ -59,6 +59,14 @@ public class GameHandler : MonoBehaviour
         SceneManager.LoadScene("Level1Dungeon");
     }
 
+    public void ToDungeon2(){
+        SceneManager.LoadScene("Level1Dungeon2");
+    }
+
+    public void ToLevel2Start(){
+        SceneManager.LoadScene("Level2Dungeon");
+    }
+
     public void ToTutHiddenPower() {
         SceneManager.LoadScene("TutorialHiddenPower");
     }
