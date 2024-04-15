@@ -5,33 +5,28 @@ using UnityEngine;
 public class GravityPowerup : MonoBehaviour
 {
     private SpriteRenderer playerSprite;
-    private bool obtained;
+    private GameHandler gameHandler;
+    private bool switched;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
         playerSprite = GetComponent<SpriteRenderer>();
-        obtained = false;
+        switched = gameHandler.reverseGravityOn;
     }
 
     void Update() {
-        if (obtained == true && Input.GetKeyDown("g")) {
-            switchGravity();
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Gravity") {
-            obtained = true;
-        }
+        switchGravity();
     }
 
     void switchGravity() {
-        if (playerSprite.flipY == false) {
-            Physics2D.gravity = new Vector2(0, 9.8f);
+        if (switched == true) {
             playerSprite.flipY = true;
+            Physics2D.gravity = new Vector2(0, 9.8f);
         } else {
-            Physics2D.gravity = new Vector2(0, -9.8f);
             playerSprite.flipY = false;
+            Physics2D.gravity = new Vector2(0, -9.8f);
         }
     }
 }
