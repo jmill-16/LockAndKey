@@ -34,22 +34,24 @@ public class PickUp : MonoBehaviour{
             if (other.gameObject.tag == "Player"){
                   if (hiddenObject) {
                         if (gameHandler.viewHiddenOn) {
-                              Debug.Log("view hidden on");
+                              //Debug.Log("view hidden on");
                               if(!audioSourseOFF.isPlaying)
                               {
                                     audioSourseOFF.Play();
                               }
 
                               GetComponent<Collider2D>().enabled = false;
+                              //Debug.Log("here1");
                               if (keyToDoor) {
-                                    Debug.Log("can open true");
+                                    //Debug.Log("can open true");
                                     gameHandler.canOpenDoor = true;
                               }
+                              //Debug.Log("here2");
                               //GetComponent< AudioSource>().Play();
                               StartCoroutine(DestroyThis());
                         } 
                         if(!gameHandler.viewHiddenOn) {
-                              Debug.Log("view hidden off");
+                              //Debug.Log("view hidden off");
                               // if(!audioSourseOFF.isPlaying)
                               // {
                               //       audioSourseOFF.Play();

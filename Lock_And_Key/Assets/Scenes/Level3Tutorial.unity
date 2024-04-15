@@ -10566,7 +10566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 0}
-  NextLevel: Level1Dungeon
+  NextLevel: Level3Platforms
   audioSource: {fileID: 0}
 --- !u!4 &1076350887
 Transform:

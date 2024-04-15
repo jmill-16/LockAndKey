@@ -24,7 +24,7 @@ public class PurpleArrow : MonoBehaviour
     void Update()
     {
         if (!gameHandler.selectedHiddenPower) {
-            Debug.Log("color");
+            //Debug.Log("color");
             if (gameHandler.viewPurpleOn) {
                 //Debug.Log("pruple");
                 foreach (GameObject purplearrow in allPurpleArrows) 
