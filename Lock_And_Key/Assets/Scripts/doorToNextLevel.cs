@@ -23,6 +23,12 @@ public class doorToNextLevel : MonoBehaviour
             if(nextRoom == "L2D1") {
                 gameHandler.ToLevel2Start();
             }
+            if(nextRoom == "THP") {
+                gameHandler.ToTutHiddenPower();
+            }
+            if(nextRoom == "L1D1"){
+                gameHandler.StartLevel1();
+            }
         }
     }
 }
