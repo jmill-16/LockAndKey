@@ -12,6 +12,8 @@ public class countdown : MonoBehaviour
     public GameObject spawnPoint;
     public Vector3 spawn;
     public bool isRunning = false;
+
+    public float startTime = 60f;
     public float timeLeft = 60f;
     // Start is called before the first frame update
     void Start()
@@ -45,7 +47,7 @@ public class countdown : MonoBehaviour
     public void StartTimer() {
         if(isRunning == false){
             timerWall.SetActive(false);
-            timeLeft = 60f;
+            timeLeft = startTime;
             isRunning = true;
         }
     }
