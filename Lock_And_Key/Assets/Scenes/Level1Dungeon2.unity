@@ -1107,7 +1107,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 698901651}
   spawn: {x: -7.5, y: -3.5, z: 0}
   isRunning: 0
-  startTime: 30
+  startTime: 60
   timeLeft: 10
 --- !u!1001 &272226280
 PrefabInstance:
