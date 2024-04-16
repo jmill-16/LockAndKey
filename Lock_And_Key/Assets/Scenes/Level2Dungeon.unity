@@ -772,6 +772,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc6d2b5d46a27f4bb1232a4bc122827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &250752660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250752658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3991f76c46e7342b6b1d8ab8d4947c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: -20
 --- !u!1001 &312684795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -835,6 +848,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6644042619750327978, guid: 75de26450adc5c74fae448e9a534a689, type: 3}
       insertIndex: -1
       addedObject: {fileID: 250752659}
+    - targetCorrespondingSourceObject: {fileID: 6644042619750327978, guid: 75de26450adc5c74fae448e9a534a689, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 250752660}
   m_SourcePrefab: {fileID: 100100000, guid: 75de26450adc5c74fae448e9a534a689, type: 3}
 --- !u!114 &391622028 stripped
 MonoBehaviour:
@@ -1186,11 +1202,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410846052904141239, guid: add3dbf3d81b0624f9b208164d9aba33, type: 3}
       propertyPath: m_text
-      value: Where to go, where to go...
+      value: Use gravity to progess through this section!
       objectReference: {fileID: 0}
     - target: {fileID: 410846052904141239, guid: add3dbf3d81b0624f9b208164d9aba33, type: 3}
       propertyPath: m_margin.z
       value: 2.6102486
+      objectReference: {fileID: 0}
+    - target: {fileID: 410846052904141239, guid: add3dbf3d81b0624f9b208164d9aba33, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 410846052904141239, guid: add3dbf3d81b0624f9b208164d9aba33, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5669986635893618007, guid: add3dbf3d81b0624f9b208164d9aba33, type: 3}
       propertyPath: m_Pivot.x
