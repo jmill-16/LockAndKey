@@ -15,6 +15,7 @@ TagManager:
   - Gravity
   - TimerWall
   - MonologueManager
+  - Phasable
   layers:
   - Default
   - TransparentFX
