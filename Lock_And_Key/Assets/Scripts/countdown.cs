@@ -12,6 +12,10 @@ public class countdown : MonoBehaviour
     public GameObject spawnPoint;
     public Vector3 spawn;
     public bool isRunning = false;
+    GameObject[] fadingPlats;
+    Color startColor;
+    Color fullAlpha;
+
 
     public float startTime = 60f;
     public float timeLeft = 60f;
@@ -21,6 +25,9 @@ public class countdown : MonoBehaviour
         Time.timeScale = 1.0f;
         timerWall = GameObject.FindWithTag("TimerWall");
         Debug.Log("x: " + spawn.x + "y: " + spawn.y + "z: " +  spawn.z);
+        fadingPlats = GameObject.FindGameObjectsWithTag("FadingPlatform");
+        startColor = fadingPlats[0].transform.GetChild(0).GetComponent<SpriteRenderer>().material.color;
+        fullAlpha = new Color(startColor.r, startColor.g, startColor.b, 1f);
     }
 
     // Update is called once per frame
@@ -49,6 +56,19 @@ public class countdown : MonoBehaviour
             timerWall.SetActive(false);
             timeLeft = startTime;
             isRunning = true;
+        }
+    }
+
+    public void RestartLevel() {
+        if(isRunning == true) {
+            timerWall.SetActive(true);
+            timeLeft = startTime;
+            player.transform.position = spawn;
+            foreach (GameObject plat in fadingPlats) {
+                plat.SetActive(true);
+                plat.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = fullAlpha;
+            }
+            isRunning = false;
         }
     }
 }
