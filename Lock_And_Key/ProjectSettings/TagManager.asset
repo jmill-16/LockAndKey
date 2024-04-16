@@ -15,7 +15,6 @@ TagManager:
   - Gravity
   - TimerWall
   - MonologueManager
-  - Item
   layers:
   - Default
   - TransparentFX
