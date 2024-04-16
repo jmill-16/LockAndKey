@@ -17,6 +17,9 @@ public class doorToNextLevel : MonoBehaviour
     {   
         if(other.gameObject.tag == "Player"){
             Debug.Log("collision working");
+            if (nextRoom == "L3T") {
+                gameHandler.ToLevel3();
+            }
             if(nextRoom == "L1D2") {
                 gameHandler.ToDungeon2();
             }

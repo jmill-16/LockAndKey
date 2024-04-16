@@ -12,11 +12,11 @@ public class GravityPowerup : MonoBehaviour
     void Start()
     {
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-        playerSprite = GetComponent<SpriteRenderer>();
-        switched = gameHandler.reverseGravityOn;
+        playerSprite = this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     void Update() {
+        switched = gameHandler.reverseGravityOn;
         switchGravity();
     }
 
