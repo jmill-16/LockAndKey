@@ -23,7 +23,7 @@ public class DoorExit_Items : MonoBehaviour
     {
         if (gameHandler.canOpenDoor)
         {
-            Debug.Log("Door available");
+            //Debug.Log("Door available");
             gameObject.GetComponent<Collider2D>().enabled = true;
         }
         else
@@ -40,8 +40,11 @@ public class DoorExit_Items : MonoBehaviour
     //   }
     public void OnTriggerEnter2D(Collider2D other)
     {
+        //Debug.Log("here");
+
         if (other.gameObject.tag == "Player")
         {
+            //Debug.Log("yup");
             if (!isAudioPlaying)
             {
                 StartCoroutine(PlayAudioAndLoadNextLevel());
