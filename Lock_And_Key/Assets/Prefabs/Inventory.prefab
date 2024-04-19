@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6301132251493276524}
   - component: {fileID: 428172179367170298}
   m_Layer: 5
-  m_Name: SpeedPowerInv
+  m_Name: SecondPowerInv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 3922690034209019231}
   - component: {fileID: 8573549434855814397}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: HiddenPowerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 9001805875745059679}
   - component: {fileID: 5924197853555714375}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: SecondPowerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
