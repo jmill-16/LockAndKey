@@ -57,7 +57,23 @@ public class PickUp : MonoBehaviour{
                               //       audioSourseOFF.Play();
                               // }     
                         }
-                  } 
+                  } else {
+                        if(!audioSourseOFF.isPlaying)
+                        {
+                              audioSourseOFF.Play();
+                        }
+
+                        GetComponent<Collider2D>().enabled = false;
+                        //Debug.Log("here1");
+                        if (keyToDoor) {
+                              //Debug.Log("can open true");
+                              gameHandler.canOpenDoor = true;
+                        }
+                        //Debug.Log("here2");
+                        //GetComponent< AudioSource>().Play();
+                        StartCoroutine(DestroyThis());
+
+                  }
             }
       }
 
