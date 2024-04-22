@@ -17,6 +17,7 @@ TagManager:
   - MonologueManager
   - Phaseable
   - Checkpoint
+  - Spikes
   layers:
   - Default
   - TransparentFX
