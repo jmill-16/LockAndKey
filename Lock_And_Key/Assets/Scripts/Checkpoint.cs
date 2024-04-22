@@ -25,11 +25,11 @@ public class checkpoint : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        reset = cd.restarted;
-        if (reset == true) {
-            resetCheckpoint();
-        }
+    {   if (cd != null)
+            reset = cd.restarted;
+            if (reset == true) {
+                resetCheckpoint();
+            }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
