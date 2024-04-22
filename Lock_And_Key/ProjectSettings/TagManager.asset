@@ -18,6 +18,8 @@ TagManager:
   - Phaseable
   - Checkpoint
   - Spikes
+  - Key
+  - Ground
   layers:
   - Default
   - TransparentFX
