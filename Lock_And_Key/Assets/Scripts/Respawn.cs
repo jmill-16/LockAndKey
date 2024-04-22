@@ -29,8 +29,10 @@ public class Respawn : MonoBehaviour
         threshold = -10;
         fadingPlats = GameObject.FindGameObjectsWithTag("FadingPlatform");
         Debug.Log("num of fading plats = " + fadingPlats.Length);
-        startColor = fadingPlats[0].transform.GetChild(0).GetComponent<SpriteRenderer>().material.color;
-        fullAlpha = new Color(startColor.r, startColor.g, startColor.b, 1f);
+        if(fadingPlats.Length > 0) {
+            startColor = fadingPlats[0].transform.GetChild(0).GetComponent<SpriteRenderer>().material.color;
+            fullAlpha = new Color(startColor.r, startColor.g, startColor.b, 1f);
+        }
         // gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
         // cd = gameHandler.GetComponent<Countdown>();
     }
