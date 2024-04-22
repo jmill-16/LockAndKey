@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 
-public class countdown : MonoBehaviour
+public class Countdown : MonoBehaviour
 {
     public GameObject timerWall;
     public GameObject timer;
@@ -15,7 +15,7 @@ public class countdown : MonoBehaviour
     GameObject[] fadingPlats;
     Color startColor;
     Color fullAlpha;
-
+    public bool restarted = false;
 
     public float startTime = 60f;
     public float timeLeft = 60f;
@@ -42,6 +42,7 @@ public class countdown : MonoBehaviour
                 timerText.text = "Time remaining: 0";
                 player.transform.position = spawn;
                 timerWall.SetActive(true);
+                restarted = true;
                 isRunning = false;
             }
         }
@@ -53,6 +54,7 @@ public class countdown : MonoBehaviour
 
     public void StartTimer() {
         if(isRunning == false){
+            restarted = false;
             timerWall.SetActive(false);
             timeLeft = startTime;
             isRunning = true;
@@ -61,6 +63,7 @@ public class countdown : MonoBehaviour
 
     public void RestartLevel() {
         if(isRunning == true) {
+            restarted = true;
             timerWall.SetActive(true);
             timeLeft = startTime;
             player.transform.position = spawn;

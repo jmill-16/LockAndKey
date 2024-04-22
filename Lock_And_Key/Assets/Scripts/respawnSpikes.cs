@@ -15,8 +15,7 @@ public class RespawnSpikes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
-        Debug.Log(spawn);
+        spawn = player.GetComponent<Respawn>().spawn;
         fadingPlats = GameObject.FindGameObjectsWithTag("FadingPlatform");
         Debug.Log("num of fading plats = " + fadingPlats.Length);
         startColor = fadingPlats[0].transform.GetChild(0).GetComponent<SpriteRenderer>().material.color;

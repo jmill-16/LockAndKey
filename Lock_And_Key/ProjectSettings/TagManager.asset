@@ -16,6 +16,7 @@ TagManager:
   - TimerWall
   - MonologueManager
   - Phaseable
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

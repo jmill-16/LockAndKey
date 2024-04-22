@@ -5,7 +5,7 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     public float threshold;
-    private Vector3 spawn = new Vector3(0,0,0);
+    public Vector3 spawn = new Vector3(0,0,0);
 
     GameObject[] fadingPlats;
 
@@ -13,15 +13,26 @@ public class Respawn : MonoBehaviour
 
     Color fullAlpha;
 
+    public GameObject player;
+
+    // public bool activatedCheckpoint = false;
+
+    // public GameObject gameHandler;
+
+    // Countdown cd;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
         threshold = -10;
         fadingPlats = GameObject.FindGameObjectsWithTag("FadingPlatform");
         Debug.Log("num of fading plats = " + fadingPlats.Length);
         startColor = fadingPlats[0].transform.GetChild(0).GetComponent<SpriteRenderer>().material.color;
         fullAlpha = new Color(startColor.r, startColor.g, startColor.b, 1f);
+        // gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
+        // cd = gameHandler.GetComponent<Countdown>();
     }
 
     // Update is called once per frame
@@ -29,6 +40,30 @@ public class Respawn : MonoBehaviour
     {
         if (transform.position.y < threshold) {
             transform.position = spawn;
+            foreach (GameObject plat in fadingPlats) {
+                plat.SetActive(true);
+                plat.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = fullAlpha;
+            }
+        }
+
+        // if (cd.restarted == true) {
+        //     activatedCheckpoint = false;
+        //     spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
+        // }
+    }
+
+    // public void OnTriggerEnter2D(Collider2D other) {
+    //     if(other.gameObject.tag == "Checkpoint") {
+    //         spawn = other.transform.position;
+    //         Debug.Log("checkpoint works");
+    //         activatedCheckpoint = true;
+    //     }
+    // }
+
+    public void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag == "Spikes"){
+            Debug.Log("working");
+            player.transform.position = spawn;
             foreach (GameObject plat in fadingPlats) {
                 plat.SetActive(true);
                 plat.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = fullAlpha;
