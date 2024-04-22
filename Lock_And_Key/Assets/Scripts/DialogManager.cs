@@ -11,11 +11,13 @@ public class DialogueScript : MonoBehaviour
     [SerializeField] Text dialogText;
     [SerializeField] int lettersPerSecond;
 
-    public static DialogManager Instance { get; private set; }
+    //public static DialogManager Instance { get; private set; }
 
-    private void Awake() {
-        Instance = this;
-    }
+    // private void Awake() {
+    //     Instance = this;
+    // }
+
+    
     public void ShowDialog(Dialog dialog) {
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
