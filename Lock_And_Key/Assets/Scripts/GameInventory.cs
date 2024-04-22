@@ -24,8 +24,8 @@ public class GameInventory : MonoBehaviour {
       //public static int coins = 0;
 
       [Header("Add item image objects here")]
-      public GameObject item1image;
-      public GameObject item2image;
+      public GameObject item1image; //HiddenPower game object
+      public GameObject item2image; //second power game object
     //   public GameObject item3image;
     //   public GameObject item4image;
     //   public GameObject item5image;
@@ -33,8 +33,8 @@ public class GameInventory : MonoBehaviour {
 
       // Item number text variables. Comment out if each item is unique (1/2).
       [Header("Add item number Text objects here")]
-      public Text item1Text;
-      public Text item2Text;
+      public Text item1Text;  //Hidden power text
+      public Text item2Text; //second power text
     //   public Text item3Text;
     //   public Text item4Text;
     //   public Text item5Text;
