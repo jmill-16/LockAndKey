@@ -16,7 +16,7 @@ public class PhasableWall : MonoBehaviour
     void Start()
     {
         startColor = this.GetComponent<TilemapRenderer>().material.color;
-        phaseableColor = new Color(startColor.r, startColor.g, startColor.b, 0.5f);
+        phaseableColor = new Color(startColor.r, startColor.g, startColor.b, 0.25f);
     }
 
     // Update is called once per frame
