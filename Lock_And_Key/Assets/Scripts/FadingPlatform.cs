@@ -6,17 +6,36 @@ public class FadingPlatform : MonoBehaviour
 {
     public float alphaLevel;
     public float fadeSpeed = 1f;
+
+    public bool hidden;
+
+    public GameHandler gameHandler;
     // private SpriteRenderer rndr;
     // // Start is called before the first frame update
     void Start() {
         alphaLevel = 1f;
         // rndr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-
+    {   
+        // if(gameHandler.viewHiddenOn == true){
+        //     Debug.Log("viewhidden is on");
+        // } else {
+        //     Debug.Log("viewhidden is not on");
+        // }
+        
+        if (hidden) {
+            if(gameHandler.viewHiddenOn) {
+                gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+            } else {
+                gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            }
+        } else {
+            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 
     public void OnCollisionEnter2D (Collision2D other){
