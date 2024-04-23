@@ -25,7 +25,6 @@ public class doorToNextLevel : MonoBehaviour
     {   
         if(other.gameObject.tag == "Player"){
             // audioManager.PlaySFX(audioManager.unlockDoor);
-            Debug.Log("collision working");
             if (nextRoom == "L3T") {
                 gameHandler.ToLevel3();
             }
@@ -34,6 +33,9 @@ public class doorToNextLevel : MonoBehaviour
             }
             if(nextRoom == "L2D1") {
                 gameHandler.ToLevel2Start();
+            }
+            if(nextRoom == "L2D2") {
+                gameHandler.ToLevel2Dungeon();
             }
             if(nextRoom == "THP") {
                 gameHandler.ToTutHiddenPower();

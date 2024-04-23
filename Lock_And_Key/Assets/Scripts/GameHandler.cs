@@ -64,6 +64,10 @@ public class GameHandler : MonoBehaviour
     }
 
     public void ToLevel2Start(){
+        SceneManager.LoadScene("GravityTutorial");
+    }
+
+    public void ToLevel2Dungeon(){
         SceneManager.LoadScene("Level2Dungeon");
     }
 

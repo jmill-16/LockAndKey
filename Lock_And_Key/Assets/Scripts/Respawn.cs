@@ -26,7 +26,6 @@ public class Respawn : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
-        threshold = -10;
         fadingPlats = GameObject.FindGameObjectsWithTag("FadingPlatform");
         Debug.Log("num of fading plats = " + fadingPlats.Length);
         if(fadingPlats.Length > 0) {
