@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CellViewHidden/TutorialHiddenPower.unity
     guid: ffa0aafe1ef164b67afc035757d63b9f
   - enabled: 1
+    path: Assets/Scenes/RoyalBallGravity/GravityTutorial.unity
+    guid: 7b17adeff91089549bf2254c083673af
+  - enabled: 1
     path: Assets/Scenes/RoyalBallGravity/Level2Dungeon.unity
     guid: b2388e3f6f424bd48bc8f4d55289db27
   - enabled: 1
