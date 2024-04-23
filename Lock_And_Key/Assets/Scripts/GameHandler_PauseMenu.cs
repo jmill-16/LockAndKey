@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class GameHandler_PauseMenu : MonoBehaviour {
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
-        public AudioMixer mixer;
+        private AudioManager audioManager;
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
 
         void Awake (){
-                SetLevel (volumeLevel);
+                if (SceneManager.GetActiveScene().name == "MainMenu") {
+                        audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
+                        SetLevel (volumeLevel);
+                }
                 GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
                 if (sliderTemp != null){
                         sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
@@ -35,6 +39,12 @@ public class GameHandler_PauseMenu : MonoBehaviour {
                                 Pause();
                         }
                 }
+                if (pauseMenuUI.activeSelf == true && SceneManager.GetActiveScene().name == "MainMenu"){
+                        GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
+                        sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
+                        SetLevel(sliderVolumeCtrl.value);
+                }
+
         }
 
         public void Pause(){
@@ -50,7 +60,10 @@ public class GameHandler_PauseMenu : MonoBehaviour {
         }
 
         public void SetLevel (float sliderValue){
-                mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
-                volumeLevel = sliderValue;
+                if (SceneManager.GetActiveScene().name == "MainMenu") {
+                        audioManager.getMusic().volume = sliderValue;
+                        audioManager.getSFX().volume = sliderValue;
+                        volumeLevel = sliderValue;
+                }
         }
 }

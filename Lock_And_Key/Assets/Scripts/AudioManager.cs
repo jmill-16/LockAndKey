@@ -28,5 +28,12 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.PlayOneShot(clip);
     }
-    
+
+    public AudioSource getMusic() {
+        return musicSource;
+    }
+
+    public AudioSource getSFX() {
+        return SFXSource;
+    }
 }
