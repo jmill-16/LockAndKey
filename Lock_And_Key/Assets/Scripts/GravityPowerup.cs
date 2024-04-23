@@ -20,7 +20,7 @@ public class GravityPowerup : MonoBehaviour
         switchGravity();
     }
 
-    void switchGravity() {
+    public void switchGravity() {
         if (switched == true) {
             playerSprite.flipY = true;
             Physics2D.gravity = new Vector2(0, 9.8f);
