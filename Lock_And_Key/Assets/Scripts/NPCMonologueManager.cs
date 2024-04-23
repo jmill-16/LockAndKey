@@ -18,14 +18,9 @@ public class NPCMonologueManager : MonoBehaviour {
 
        void Update(){
               //temporary testing before NPC is created
-              if (Input.GetKeyDown("o")){
-                     monologueBox.SetActive(true);
-              }
-              if (Input.GetKeyDown("p")){
-                     monologueBox.SetActive(false);
-                     monologueText.text = "..."; //reset text
-                     counter = 0; //reset counter
-              }
+              
+              monologueBox.SetActive(true);
+       
        }
 
        public void OpenMonologue(){
