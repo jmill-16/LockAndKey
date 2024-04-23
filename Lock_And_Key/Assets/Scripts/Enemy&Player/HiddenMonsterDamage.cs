@@ -4,117 +4,50 @@ using UnityEngine;
 
 public class HiddenMonsterDamage : MonoBehaviour
 {
-     //public Animator anim;
-       public float speed = 2f;
-       public float stoppingDistance = 4f; // when enemy stops moving towards player
-       public float retreatDistance = 3f; // when enemy moves away from approaching player
-       private float timeBtwShots;
-       public float startTimeBtwShots = 2;
-       public GameObject projectile;
+    //public Animator anim;
+    public float speed;
+    private GameObject player;
 
-       private Rigidbody2D rb;
-       private Transform player;
-       private Vector2 PlayerVect;
+    //public bool chase = false;
 
-       //xpublic int EnemyLives = 30;
-       private Renderer rend;
-       //private GameHandler gameHandler;
+    public Transform startingPoint;
 
-       public float attackRange = 10;
-       public bool isAttacking = false;
-       private float scaleX;
+    public GameHandler gamehandler;
 
-       void Start () {
-              Physics2D.queriesStartInColliders = false;
-              scaleX = gameObject.transform.localScale.x;
+    void Start () {
+        player = GameObject.FindGameObjectWithTag("Player");
+        gamehandler = GameObject.FindGameObjectWithTag("GameHandler").GetComponent<GameHandler>();
+        
+    }
+    void Update () {
+        if (gamehandler.viewPurpleOn) {
+            Chase();
+        } else 
+        {
+            ReturnStartPoint();
+        }
+        Flip();
+    }
 
-              rb = GetComponent<Rigidbody2D> ();
-              player = GameObject.FindGameObjectWithTag("Player").transform;
-              PlayerVect = player.transform.position;
+    private void Chase()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+    }
 
-              timeBtwShots = startTimeBtwShots;
+    private void Flip()
+    {
+        if (transform.position.x > player.transform.position.x) {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        } else {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+    }
 
-              rend = GetComponentInChildren<Renderer> ();
-              //anim = GetComponentInChildren<Animator> ();
+    private void ReturnStartPoint()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, startingPoint.position, speed * Time.deltaTime);
+    }
+    
 
-              //if (GameObject.FindWithTag ("GameHandler") != null) {
-              // gameHander = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
-              //}
-       }
-
-       void Update () {
-              float DistToPlayer = Vector3.Distance(transform.position, player.position);
-              if ((player != null) && (DistToPlayer <= attackRange)) {
-                     // approach player
-                     if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
-                            transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
-                            if (isAttacking == false) {
-                                   //anim.SetBool("Walk", true);
-                            }
-                            //Vector2 lookDir = PlayerVect - rb.position;
-                            //float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg -90f;
-                            //rb.rotation = angle;
-                     }
-                     // stop moving
-                     else if (Vector2.Distance (transform.position, player.position) < stoppingDistance && Vector2.Distance (transform.position, player.position) > retreatDistance) {
-                            transform.position = this.transform.position;
-                            //anim.SetBool("Walk", false);
-                     }
-
-                     // retreat from player
-                     else if (Vector2.Distance (transform.position, player.position) < retreatDistance) {
-                            transform.position = Vector2.MoveTowards (transform.position, player.position, -speed * Time.deltaTime);
-                            if (isAttacking == false) {
-                                   //anim.SetBool("Walk", true);
-                            }
-                     }
-
-                     //Flip enemy to face player direction. Wrong direction? Swap the * -1.
-                     if (player.position.x > gameObject.transform.position.x){
-                            gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
-                    } else {
-                             gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
-                     }
-
-                     //Timer for shooting projectiles
-                     if (timeBtwShots <= 0) {
-                            isAttacking = true;
-                            //anim.SetTrigger("Attack");
-                            Instantiate (projectile, transform.position, Quaternion.identity);
-                            timeBtwShots = startTimeBtwShots;
-                     } else {
-                            timeBtwShots -= Time.deltaTime;
-                            isAttacking = false;
-                     }
-              }
-       }
-
-    //    void OnCollisionEnter2D(Collision2D collision){
-    //           //if (collision.gameObject.tag == "bullet") {
-    //           // EnemyLives -= 1;
-    //           // StopCoroutine("HitEnemy");
-    //           // StartCoroutine("HitEnemy");
-    //           //}
-    //           if (collision.gameObject.tag == "Player") {
-    //                  EnemyLives -= 2;
-    //                  StopCoroutine("HitEnemy");
-    //                  StartCoroutine("HitEnemy");
-    //           }
-    //    }
-
-    //    IEnumerator HitEnemy(){
-    //           // color values are R, G, B, and alpha, each divided by 100
-    //           rend.material.color = new Color(2.4f, 0.9f, 0.9f, 0.5f);
-    //           if (EnemyLives < 1){
-    //                  //gameControllerObj.AddScore (5);
-    //                  Destroy(gameObject);
-    //           }
-    //           else yield return new WaitForSeconds(0.5f);
-    //           rend.material.color = Color.white;
-    //    }
-
-      //DISPLAY the range of enemy's attack when selected in the Editor
-       void OnDrawGizmosSelected(){
-              Gizmos.DrawWireSphere(transform.position, attackRange);
-       }
+    
 }
