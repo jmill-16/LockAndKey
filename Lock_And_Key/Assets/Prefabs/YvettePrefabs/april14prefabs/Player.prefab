@@ -56,7 +56,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 0
-  healthBar: {fileID: 0}
 --- !u!61 &528672178237944135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -371,7 +370,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: bfc3551eadc014a7098ef66e81b74f90, type: 3}
+  m_Sprite: {fileID: -734117058, guid: 67d0d8f3c715247b2a39555109f75031, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

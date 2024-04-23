@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f09ae24fcc65847e6aad04afe9f0cfdb
+guid: 7590d15043ce1412a9650eb2943e8c32
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MageSpriteSheet_0
+      name: mage3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b607227f3fea54392b0b536320911897
-      internalID: 294875972
+      spriteID: cf985fb303a4349c5855d6202ffa6e83
+      internalID: 1320902855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_1
+      name: mage3_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 904dbbd64394a46a6b410240433d78e0
-      internalID: -1003076853
+      spriteID: 4923a381841b6409c97065774c050e28
+      internalID: -1351861756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_2
+      name: mage3_2
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8be8230759bd45049e8e11d60c7f2c3
-      internalID: -1894319463
+      spriteID: 13d799b3dc79f4f48bebaa694a462a34
+      internalID: -207753844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_3
+      name: mage3_3
       rect:
         serializedVersion: 2
         x: 192
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47bc1e6b9c7ba40948271a54531653cf
-      internalID: 1354418780
+      spriteID: 5f2d8882419684debb8b367752ea7bb6
+      internalID: 198764535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_4
+      name: mage3_4
       rect:
         serializedVersion: 2
         x: 256
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82cddb7e8e0434d888f87eabe3b57cf8
-      internalID: -2001474826
+      spriteID: 2ed079e3ca3d049ccb3a92d81c86f1e9
+      internalID: -235291845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_5
+      name: mage3_5
       rect:
         serializedVersion: 2
         x: 320
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bd64b68dd1154d4a841e6dc95c80430
-      internalID: -1532675660
+      spriteID: 732d43d7c13a343ec8529236c19e3d85
+      internalID: 865051559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_6
+      name: mage3_6
       rect:
         serializedVersion: 2
         x: 384
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dfedb979484c405b9bcf4d26da50690
-      internalID: 653155622
+      spriteID: b3049fa7f768e4267a946d17f6db1dfd
+      internalID: -1864609900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_7
+      name: mage3_7
       rect:
         serializedVersion: 2
         x: 448
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50cfdc5f6cfbc424a8a69bd56c63a5fb
-      internalID: 2114146139
+      spriteID: 7e9331bd2da664823900450be4ae0a6a
+      internalID: 1370274624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_8
+      name: mage3_8
       rect:
         serializedVersion: 2
         x: 0
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76cbd6ff284dd404db66549b0362999e
-      internalID: -1342524984
+      spriteID: 5911ecae495e4451a80a61ac4b2ef0bc
+      internalID: 964836219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_9
+      name: mage3_9
       rect:
         serializedVersion: 2
         x: 64
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b3eadfb2dcae402c8d581bc1c56e47e
-      internalID: -1311207838
+      spriteID: 8273afe8d278549b896109d296b66814
+      internalID: 1836108876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_10
+      name: mage3_10
       rect:
         serializedVersion: 2
         x: 128
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c0e5234c3e946a9bd2271ab4ad1a4f
-      internalID: 1401322425
+      spriteID: f73faa6dce41343dd9e1af2d4d6c8c84
+      internalID: -887381022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_11
+      name: mage3_11
       rect:
         serializedVersion: 2
         x: 192
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd7d890b3e63d495b87548a4d7ea10ad
-      internalID: 1408960998
+      spriteID: 2c181410629394be4b1941b7c6b767c1
+      internalID: -695067020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_12
+      name: mage3_12
       rect:
         serializedVersion: 2
         x: 256
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e704437462c6c45fe8492f6657187e3d
-      internalID: 690006019
+      spriteID: 76a98a47486c04db59df59a89d2d06dc
+      internalID: -2047965897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_13
+      name: mage3_13
       rect:
         serializedVersion: 2
         x: 320
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a6fb29da84b843a4acdf04b1866f799
-      internalID: -520541614
+      spriteID: feb57af45acec4d9984f3feb9fd7cd52
+      internalID: 1350315874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_14
+      name: mage3_14
       rect:
         serializedVersion: 2
         x: 384
@@ -431,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aab2a787bd37b4490aab8acdc01c7e28
-      internalID: 1008211149
+      spriteID: f8849f4f02dbc48c8a9c5cd7ea8d67a5
+      internalID: -1613228851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_15
+      name: mage3_15
       rect:
         serializedVersion: 2
         x: 448
@@ -452,14 +452,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c5e4ac64c8a44c2ba0a1f60bb02119b
-      internalID: 668332743
+      spriteID: 3ea7d77e12dc148529368b1b1259fd1f
+      internalID: -721861779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_16
+      name: mage3_16
       rect:
         serializedVersion: 2
         x: 0
@@ -473,14 +473,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcdafe47ee0d74075939d8efa7e5a29a
-      internalID: -1759470558
+      spriteID: a95528961f0534ccea9584758b0a4af5
+      internalID: 745163245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_17
+      name: mage3_17
       rect:
         serializedVersion: 2
         x: 64
@@ -494,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c4cc5df7d4a546d886baba298844278
-      internalID: -1077012700
+      spriteID: e4b646bacfab54a8083293c241581ee5
+      internalID: -1954679026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_18
+      name: mage3_18
       rect:
         serializedVersion: 2
         x: 128
@@ -515,14 +515,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d15d740027ec45beac713be2ad57fad
-      internalID: 1731610724
+      spriteID: de6198b95cda941d68b0a2a42999f27b
+      internalID: -1207990272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_19
+      name: mage3_19
       rect:
         serializedVersion: 2
         x: 192
@@ -536,14 +536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47c77c52652c74711a692bf90aa2bad7
-      internalID: -894786929
+      spriteID: 5537262880a1f41ebba3fc07e1d1e014
+      internalID: 294952760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_20
+      name: mage3_20
       rect:
         serializedVersion: 2
         x: 256
@@ -557,14 +557,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba87ab44b6c644a3b69af2117af6985
-      internalID: 338297109
+      spriteID: 6a87ccd37c6b249f8904905b4a030577
+      internalID: 1700290317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_21
+      name: mage3_21
       rect:
         serializedVersion: 2
         x: 320
@@ -578,14 +578,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a804ec3b9c0a647ae83af769dff2d2d0
-      internalID: 608250928
+      spriteID: cd25c68ce7999485b903692f81ee86bc
+      internalID: 1522984293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_22
+      name: mage3_22
       rect:
         serializedVersion: 2
         x: 384
@@ -599,14 +599,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71ce7e7a3e1eb4a4db584e1aec686093
-      internalID: 681850463
+      spriteID: 00b2c5de1c171400ea329951a1b601e0
+      internalID: 32629021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_23
+      name: mage3_23
       rect:
         serializedVersion: 2
         x: 448
@@ -620,14 +620,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eaafa47f52b543398800a80aee5c050
-      internalID: -1880015411
+      spriteID: c06034e25651e4649a39efe5a6d6c2f5
+      internalID: -1931225994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_24
+      name: mage3_24
       rect:
         serializedVersion: 2
         x: 0
@@ -641,14 +641,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 638fac8326253467ba3e97a66ca68898
-      internalID: -954385251
+      spriteID: 220090040b2684fff996b21322176674
+      internalID: -640609829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_25
+      name: mage3_25
       rect:
         serializedVersion: 2
         x: 64
@@ -662,14 +662,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 296b6d34f40894aa7903a5746f072e9d
-      internalID: -1471405432
+      spriteID: dea9e0aacc0014230996730e46259da8
+      internalID: 1483747257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_26
+      name: mage3_26
       rect:
         serializedVersion: 2
         x: 128
@@ -683,14 +683,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a67301bd647c94b2f963b9334f2f88be
-      internalID: -1749836869
+      spriteID: b36a9f4e7cadd4d7a8c03b61b81f2d89
+      internalID: 893389857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_27
+      name: mage3_27
       rect:
         serializedVersion: 2
         x: 192
@@ -704,14 +704,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2808cd9e2953471caf34ce5675f844b
-      internalID: 1795806726
+      spriteID: 55829a42e39d84697be5e8fde56ba8a7
+      internalID: -1329377446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_28
+      name: mage3_28
       rect:
         serializedVersion: 2
         x: 256
@@ -725,14 +725,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8424f252370354ae583ab35909b04c52
-      internalID: -1545351998
+      spriteID: 0865ee60b37ec4da9a9e3f1d9be2f8ad
+      internalID: -1728193305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_29
+      name: mage3_29
       rect:
         serializedVersion: 2
         x: 320
@@ -746,14 +746,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d1dc341da1ea4219bb28a284a49d1ca
-      internalID: 836779221
+      spriteID: 2e0a153cb57c94d0ca96ee10a19b2d04
+      internalID: 869186583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_30
+      name: mage3_30
       rect:
         serializedVersion: 2
         x: 384
@@ -767,14 +767,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c1935930f77a4ea3890854125897bdf
-      internalID: -414441170
+      spriteID: 7434d3af54b68459f8f8ccc8afdbad50
+      internalID: -1702431537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_31
+      name: mage3_31
       rect:
         serializedVersion: 2
         x: 448
@@ -788,14 +788,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75cc422acc9784f49a52ef739a827f89
-      internalID: -1154301181
+      spriteID: 0860fa22ad12b4d34a3c8b577d843268
+      internalID: -444723607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_32
+      name: mage3_32
       rect:
         serializedVersion: 2
         x: 0
@@ -809,14 +809,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc65ba196a83e435aa476b47347fb16b
-      internalID: 189761494
+      spriteID: 774dfd5dcd46646c5b3dc4450e2f770b
+      internalID: -627087322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_33
+      name: mage3_33
       rect:
         serializedVersion: 2
         x: 64
@@ -830,14 +830,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4e799ef52a134816b167ade1d96fb9b
-      internalID: -571449323
+      spriteID: 27178ba81a3dc49bda61684b3a616e2e
+      internalID: -1962276359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_34
+      name: mage3_34
       rect:
         serializedVersion: 2
         x: 128
@@ -851,14 +851,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 482b499e1768543ed97ad0ce1f993c63
-      internalID: 354435229
+      spriteID: 1cb626a09037d41339f62eaf3a7918c8
+      internalID: 1910084760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_35
+      name: mage3_35
       rect:
         serializedVersion: 2
         x: 192
@@ -872,14 +872,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87e2a0937384841108bb0b942b14779c
-      internalID: 1415452981
+      spriteID: aa51bdebd524a4bc383c03fbff29bc66
+      internalID: -2046842673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_36
+      name: mage3_36
       rect:
         serializedVersion: 2
         x: 256
@@ -893,14 +893,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3038b256511b544fbad73bb5c27b4d81
-      internalID: -392499327
+      spriteID: 1f69edf99791f43f8a61846a55a85e37
+      internalID: -1464400903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_37
+      name: mage3_37
       rect:
         serializedVersion: 2
         x: 320
@@ -914,14 +914,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86ac0c13415104715a54c2bca1251eab
-      internalID: 588583151
+      spriteID: b58e87482d0884fcf8f02e987d9ff2c5
+      internalID: 2072662777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_38
+      name: mage3_38
       rect:
         serializedVersion: 2
         x: 384
@@ -935,14 +935,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7e64d86b4f4b4fc08ebc9513876b38e
-      internalID: -1894327967
+      spriteID: 9ce626482053f47a68fc99d73a0cfe85
+      internalID: -1432550454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MageSpriteSheet_39
+      name: mage3_39
       rect:
         serializedVersion: 2
         x: 448
@@ -956,8 +956,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ec56bd42971e4e0b9f006da28f6c629
-      internalID: -795645004
+      spriteID: ef0c8ab802f04409b971ea4bc1ce0f12
+      internalID: 165292301
       vertices: []
       indices: 
       edges: []
@@ -973,46 +973,46 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MageSpriteSheet_0: 294875972
-      MageSpriteSheet_1: -1003076853
-      MageSpriteSheet_10: 1401322425
-      MageSpriteSheet_11: 1408960998
-      MageSpriteSheet_12: 690006019
-      MageSpriteSheet_13: -520541614
-      MageSpriteSheet_14: 1008211149
-      MageSpriteSheet_15: 668332743
-      MageSpriteSheet_16: -1759470558
-      MageSpriteSheet_17: -1077012700
-      MageSpriteSheet_18: 1731610724
-      MageSpriteSheet_19: -894786929
-      MageSpriteSheet_2: -1894319463
-      MageSpriteSheet_20: 338297109
-      MageSpriteSheet_21: 608250928
-      MageSpriteSheet_22: 681850463
-      MageSpriteSheet_23: -1880015411
-      MageSpriteSheet_24: -954385251
-      MageSpriteSheet_25: -1471405432
-      MageSpriteSheet_26: -1749836869
-      MageSpriteSheet_27: 1795806726
-      MageSpriteSheet_28: -1545351998
-      MageSpriteSheet_29: 836779221
-      MageSpriteSheet_3: 1354418780
-      MageSpriteSheet_30: -414441170
-      MageSpriteSheet_31: -1154301181
-      MageSpriteSheet_32: 189761494
-      MageSpriteSheet_33: -571449323
-      MageSpriteSheet_34: 354435229
-      MageSpriteSheet_35: 1415452981
-      MageSpriteSheet_36: -392499327
-      MageSpriteSheet_37: 588583151
-      MageSpriteSheet_38: -1894327967
-      MageSpriteSheet_39: -795645004
-      MageSpriteSheet_4: -2001474826
-      MageSpriteSheet_5: -1532675660
-      MageSpriteSheet_6: 653155622
-      MageSpriteSheet_7: 2114146139
-      MageSpriteSheet_8: -1342524984
-      MageSpriteSheet_9: -1311207838
+      mage3_0: 1320902855
+      mage3_1: -1351861756
+      mage3_10: -887381022
+      mage3_11: -695067020
+      mage3_12: -2047965897
+      mage3_13: 1350315874
+      mage3_14: -1613228851
+      mage3_15: -721861779
+      mage3_16: 745163245
+      mage3_17: -1954679026
+      mage3_18: -1207990272
+      mage3_19: 294952760
+      mage3_2: -207753844
+      mage3_20: 1700290317
+      mage3_21: 1522984293
+      mage3_22: 32629021
+      mage3_23: -1931225994
+      mage3_24: -640609829
+      mage3_25: 1483747257
+      mage3_26: 893389857
+      mage3_27: -1329377446
+      mage3_28: -1728193305
+      mage3_29: 869186583
+      mage3_3: 198764535
+      mage3_30: -1702431537
+      mage3_31: -444723607
+      mage3_32: -627087322
+      mage3_33: -1962276359
+      mage3_34: 1910084760
+      mage3_35: -2046842673
+      mage3_36: -1464400903
+      mage3_37: 2072662777
+      mage3_38: -1432550454
+      mage3_39: 165292301
+      mage3_4: -235291845
+      mage3_5: 865051559
+      mage3_6: -1864609900
+      mage3_7: 1370274624
+      mage3_8: 964836219
+      mage3_9: 1836108876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

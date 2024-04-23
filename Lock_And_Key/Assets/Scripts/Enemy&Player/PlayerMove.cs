@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
-      //public Animator animator;
+       private Animator anim;
+              private Renderer rend;
+
       public Rigidbody2D rb2D;
       public bool flippedLeft;
       // public bool facingRight;
@@ -19,6 +21,8 @@ public class PlayerMove : MonoBehaviour {
       private Vector3 hMove;
 
       void Start(){
+             anim = GetComponentInChildren<Animator>();
+              rend = GetComponentInChildren<Renderer> ();
            //animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
            audioSourse = GetComponent<AudioSource>();
@@ -99,6 +103,23 @@ public class PlayerMove : MonoBehaviour {
       public void increasedSpeed() {
             runSpeed = 10f;
       }
+       public void playerHit(){
+                if (isAlive == true){
+                       anim.SetTrigger("Hurt");
+                }
+        }
+
+       public void playerDie(){
+                anim.SetTrigger("Dead");
+                if (isAlive == false) {
+                       //Debug.Log("I'm already dead");
+                }
+                else if (isAlive == true) {
+                        isAlive = false;
+                        gameObject.GetComponent<Collider2D>().enabled = false;
+                        //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                }
+        }
 }
 
 
