@@ -6,39 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Menus/MainMenu.unity
     guid: c9003ab527483401886dfe454a3e9d47
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Workspaces/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level1Dungeon.unity
+    path: Assets/Scenes/DungeonSpeed/Level1Dungeon.unity
     guid: 14c39f2c3a9894bf5876f0555869f144
   - enabled: 1
-    path: Assets/Scenes/Level1Dungeon2.unity
+    path: Assets/Scenes/DungeonSpeed/Level1Dungeon2.unity
     guid: a89f59751867a43d0925f9b7c2f54968
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/Menus/Credits.unity
     guid: a459c60c5179c480d9e635c11594aff4
   - enabled: 1
-    path: Assets/Scenes/IntroCutscene.unity
+    path: Assets/Scenes/CellViewHidden/IntroCutscene.unity
     guid: 5f87dff9723e44e43a00ef6fef6fac11
   - enabled: 1
-    path: Assets/Scenes/TutorialCell.unity
+    path: Assets/Scenes/CellViewHidden/TutorialCell.unity
     guid: 75999cafc5041fc409aaa1da04aef41a
   - enabled: 1
-    path: Assets/Scenes/TutorialHiddenPower.unity
+    path: Assets/Scenes/CellViewHidden/TutorialHiddenPower.unity
     guid: ffa0aafe1ef164b67afc035757d63b9f
   - enabled: 1
-    path: Assets/Scenes/Level2Dungeon.unity
+    path: Assets/Scenes/RoyalBallGravity/Level2Dungeon.unity
     guid: b2388e3f6f424bd48bc8f4d55289db27
   - enabled: 1
-    path: Assets/Scenes/Level3Tutorial.unity
+    path: Assets/Scenes/GardenColorSwitch/Level3Tutorial.unity
     guid: b1547c6d4e5e344f8874146d90ba5b41
   - enabled: 1
-    path: Assets/Scenes/Level3Platforms.unity
+    path: Assets/Scenes/GardenColorSwitch/Level3Platforms.unity
     guid: 97ae66cedfcb7405c9f860a9a727783d
   - enabled: 1
-    path: Assets/Scenes/Level3Code.unity
+    path: Assets/Scenes/GardenColorSwitch/Level3Code.unity
     guid: 807210763f41b43709ff0c0655982094
   m_configObjects: {}

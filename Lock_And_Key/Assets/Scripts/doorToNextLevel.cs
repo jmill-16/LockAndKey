@@ -6,6 +6,14 @@ public class doorToNextLevel : MonoBehaviour
 {
     public GameHandler gameHandler;
     public string nextRoom;
+
+    // AudioManager audioManager;
+
+    // private void Awake()
+    // {
+    //     Debug.Log("when are you called");
+    //     audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    // }
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +24,7 @@ public class doorToNextLevel : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {   
         if(other.gameObject.tag == "Player"){
+            // audioManager.PlaySFX(audioManager.unlockDoor);
             Debug.Log("collision working");
             if (nextRoom == "L3T") {
                 gameHandler.ToLevel3();
