@@ -10326,7 +10326,7 @@ MonoBehaviour:
   cam: {fileID: 89638432}
   camSize: 5
   changingSize: 0
-  speedCamSize: 7.5
+  speedCamSize: 5
   fadeSize: 5
   runSpeed: 0
   superSpeed: 0
