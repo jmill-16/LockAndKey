@@ -414,7 +414,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 209, y: -47}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689048831
 MonoBehaviour:
@@ -437,7 +437,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    m_NormalColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -626,7 +626,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 720}
+  m_SizeDelta: {x: 1300, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784443278
 MonoBehaviour:
@@ -1050,11 +1050,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
-    m_FontStyle: 1
+    m_FontSize: 30
+    m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1230,27 +1230,32 @@ PrefabInstance:
       objectReference: {fileID: 706210767}
     - target: {fileID: 2423812660290527137, guid: 9d707cec9f9b54c5b9fa41258e14e6b3, type: 3}
       propertyPath: monologue.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2423812660290527137, guid: 9d707cec9f9b54c5b9fa41258e14e6b3, type: 3}
       propertyPath: monologue.Array.data[0]
-      value: Ugh... What happened?
+      value: 'YOU: Ugh... What happened?'
       objectReference: {fileID: 0}
     - target: {fileID: 2423812660290527137, guid: 9d707cec9f9b54c5b9fa41258e14e6b3, type: 3}
       propertyPath: monologue.Array.data[1]
-      value: Oh hey! You're awake.
+      value: 'SKELETON: Oh hey! You''re awake.'
       objectReference: {fileID: 0}
     - target: {fileID: 2423812660290527137, guid: 9d707cec9f9b54c5b9fa41258e14e6b3, type: 3}
       propertyPath: monologue.Array.data[2]
-      value: Who are you?
+      value: 'YOU: Who are you?'
       objectReference: {fileID: 0}
     - target: {fileID: 2423812660290527137, guid: 9d707cec9f9b54c5b9fa41258e14e6b3, type: 3}
       propertyPath: monologue.Array.data[3]
-      value: I can feel myself leaving this mortal realm... Make it out for me, please.
+      value: 'SKELETON: My time has come... I don''t know what will happen to me
+        after my soul has left this body...'
       objectReference: {fileID: 0}
     - target: {fileID: 2423812660290527137, guid: 9d707cec9f9b54c5b9fa41258e14e6b3, type: 3}
       propertyPath: monologue.Array.data[4]
-      value: 'Wait! '
+      value: 'SKELETON: Escape in my place! Go before I turn!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423812660290527137, guid: 9d707cec9f9b54c5b9fa41258e14e6b3, type: 3}
+      propertyPath: monologue.Array.data[5]
+      value: 'YOU: Wait!'
       objectReference: {fileID: 0}
     - target: {fileID: 2882820441144211839, guid: 9d707cec9f9b54c5b9fa41258e14e6b3, type: 3}
       propertyPath: m_Name
