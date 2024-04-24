@@ -481,7 +481,7 @@ PrefabInstance:
     - target: {fileID: 274459451844041496, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4738685184897400603}
+      objectReference: {fileID: 0}
     - target: {fileID: 274459451844041496, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
@@ -609,7 +609,7 @@ PrefabInstance:
     - target: {fileID: 5324573710829154022, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4738685184897400603}
+      objectReference: {fileID: 0}
     - target: {fileID: 5324573710829154022, guid: 361243963818145788b10f101a10d93a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetLevel
@@ -1580,6 +1580,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 520121503}
     - target: {fileID: 246276601546081598, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
+      propertyPath: gameHandler
+      value: 
+      objectReference: {fileID: 4738685184897400600}
+    - target: {fileID: 246276601546081598, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
       propertyPath: InventoryMenu
       value: 
       objectReference: {fileID: 491694344}
@@ -1645,7 +1649,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3224968718690795967, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4738685184897400603}
+      addedObject: {fileID: 4738685184897400601}
   m_SourcePrefab: {fileID: 100100000, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
 --- !u!114 &4738685184897400600 stripped
 MonoBehaviour:
@@ -1658,7 +1662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9019937673b9342fb8fdf0abcbd4c41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4738685184897400603
+--- !u!114 &4738685184897400601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
