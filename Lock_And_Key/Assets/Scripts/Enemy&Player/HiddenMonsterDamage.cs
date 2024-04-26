@@ -20,12 +20,12 @@ public class HiddenMonsterDamage : MonoBehaviour
         
     }
     void Update () {
-        if (gamehandler.viewPurpleOn) {
+        //if (gamehandler.viewPurpleOn) {
             Chase();
-        } else 
-        {
-            ReturnStartPoint();
-        }
+        //} else 
+        //{
+        //    ReturnStartPoint();
+        //}
         Flip();
     }
 
