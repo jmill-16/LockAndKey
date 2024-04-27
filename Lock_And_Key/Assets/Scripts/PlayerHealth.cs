@@ -37,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
 
             //show lose screen
         }
+
+        //Debug.Log("got hit");
     }
 
 //for when we add healing to the game

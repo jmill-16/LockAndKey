@@ -5,7 +5,7 @@ using UnityEngine;
 public class DragonProjectile : MonoBehaviour
 {
     public GameHandler gameHandlerObj;
-       public int damage =1;
+       public int damage = 10;
        public float speed = 10f;
        private Transform playerTrans;
        private Vector2 target;
@@ -41,6 +41,7 @@ public class DragonProjectile : MonoBehaviour
               if (collision.gameObject.tag == "Player") {
                      //playerHealth.TakeDamage(damage);
                      collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+                     //Debug.Log("hit");
               }
             //   if (collision.gameObject.tag != "enemyShooter") {
             //          GameObject animEffect = Instantiate (hitEffectAnim, transform.position, Quaternion.identity);
