@@ -42,7 +42,8 @@ public class DragonShoot : MonoBehaviour
               //}
        }
 
-       void Update () {
+       void FixedUpdate () {
+              rb.velocity = new Vector3(0f, 0f, 0f);
               float DistToPlayer = Vector3.Distance(transform.position, player.position);
               if ((player != null) && (DistToPlayer <= attackRange)) {
                      // approach player

@@ -21,6 +21,8 @@ public class GameHandler : MonoBehaviour
     public bool selectedHiddenPower;
 
     public bool canOpenDoor;
+
+    //public Animator colorAnimOn;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,7 @@ public class GameHandler : MonoBehaviour
                     reverseGravityOn = !reverseGravityOn;
                 } else if (levelPower == "colorview") {
                     viewPurpleOn = !viewPurpleOn;
+
                 }
             }
         }
