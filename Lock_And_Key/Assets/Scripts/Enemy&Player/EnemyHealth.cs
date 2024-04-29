@@ -25,8 +25,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        StartCoroutine("HitEnemy");
         StopCoroutine("HitEnemy");
+        StartCoroutine("HitEnemy");
         health -=damage;
         if(health <= 0)
         {
