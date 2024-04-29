@@ -16,7 +16,7 @@ public class DragonShoot : MonoBehaviour
        private Transform player;
        private Vector2 PlayerVect;
 
-       public int EnemyLives = 30;
+       //public int EnemyLives = 30;
        private Renderer rend;
        //private GameHandler gameHandler;
 
@@ -50,12 +50,10 @@ public class DragonShoot : MonoBehaviour
                      if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
                             transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
                             if (isAttacking == false) {
-                                   //anim.SetBool("Walk", true);
                             }
-                            //Vector2 lookDir = PlayerVect - rb.position;
-                            //float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg -90f;
-                            //rb.rotation = angle;
                      }
+
+
                      // stop moving
                      else if (Vector2.Distance (transform.position, player.position) < stoppingDistance && Vector2.Distance (transform.position, player.position) > retreatDistance) {
                             transform.position = this.transform.position;
@@ -97,16 +95,16 @@ public class DragonShoot : MonoBehaviour
               // StartCoroutine("HitEnemy");
               //}
               if (collision.gameObject.tag == "Player") {
-                     EnemyLives -= 2;
-                     StopCoroutine("HitEnemy");
-                     StartCoroutine("HitEnemy");
+                     gameObject.GetComponent<EnemyHealth>().TakeDamage(5);
+                     //StopCoroutine("HitEnemy");
+                     //StartCoroutine("HitEnemy");
               }
        }
 
        IEnumerator HitEnemy(){
               // color values are R, G, B, and alpha, each divided by 100
               rend.material.color = new Color(2.4f, 0.9f, 0.9f, 0.5f);
-              if (EnemyLives < 1){
+              if (gameObject.GetComponent<EnemyHealth>().health < 1){
                      //gameControllerObj.AddScore (5);
                      Destroy(gameObject);
               }

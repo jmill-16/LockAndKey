@@ -43,11 +43,10 @@ public class DragonProjectile : MonoBehaviour
                      collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
                      //Debug.Log("hit");
               }
-            //   if (collision.gameObject.tag != "enemyShooter") {
-            //          GameObject animEffect = Instantiate (hitEffectAnim, transform.position, Quaternion.identity);
-            //          Destroy (animEffect, 0.5f);
-            //          Destroy (gameObject);
-            //   }
+
+              if ((collision.gameObject.tag != "Enemy") && (collision.gameObject.tag != "Key")) {
+                     Destroy (gameObject);
+              }
        }
 
        IEnumerator selfDestruct(){
