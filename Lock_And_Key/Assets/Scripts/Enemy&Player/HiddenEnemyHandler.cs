@@ -14,12 +14,14 @@ public class HiddenEnemyHandler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(gamehandler.viewPurpleOn){
+        if (hiddenEnemy) {
+            if(gamehandler.viewPurpleOn){
             hiddenEnemy.SetActive(true);
-        } else {
+            } else {
             hiddenEnemy.SetActive(false);
+        }
         }
     }
 }
