@@ -62,7 +62,7 @@ public class BossFadingPlats : MonoBehaviour
 
         while(this.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color.a < 1) {
             Color startColor = this.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color;
-            float fadeLevel = startColor.a + (fadeSpeed * Time.deltaTime);
+            float fadeLevel = startColor.a + (2 * fadeSpeed * Time.deltaTime);
 
             startColor = new Color(startColor.r, startColor.g, startColor.b, fadeLevel);
             this.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = startColor;
