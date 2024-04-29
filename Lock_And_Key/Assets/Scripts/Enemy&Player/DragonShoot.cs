@@ -6,8 +6,8 @@ public class DragonShoot : MonoBehaviour
 {
     //public Animator anim;
        public float speed = 2f;
-       public float stoppingDistance = 4f; // when enemy stops moving towards player
-       public float retreatDistance = 3f; // when enemy moves away from approaching player
+       public float stoppingDistance = 9f; // when enemy stops moving towards player
+       public float retreatDistance = 7f; // when enemy moves away from approaching player
        private float timeBtwShots;
        public float startTimeBtwShots = 2;
        public GameObject projectile;
@@ -56,6 +56,7 @@ public class DragonShoot : MonoBehaviour
 
                      // stop moving
                      else if (Vector2.Distance (transform.position, player.position) < stoppingDistance && Vector2.Distance (transform.position, player.position) > retreatDistance) {
+                            Debug.Log("stop moving");
                             transform.position = this.transform.position;
                             //anim.SetBool("Walk", false);
                      }
@@ -114,6 +115,7 @@ public class DragonShoot : MonoBehaviour
 
       //DISPLAY the range of enemy's attack when selected in the Editor
        void OnDrawGizmosSelected(){
-              Gizmos.DrawWireSphere(transform.position, attackRange);
+              //Gizmos.DrawWireSphere(transform.position, attackRange);
+              Gizmos.DrawWireSphere(transform.position, 9);
        }
 }

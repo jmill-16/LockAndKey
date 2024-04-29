@@ -21,11 +21,11 @@ public class tempdoor : MonoBehaviour
 
     void Update()
     {
-            Debug.Log("Door available");
+            //Debug.Log("Door available");
             gameObject.GetComponent<Collider2D>().enabled = true;
         if (gameHandler.canOpenDoor)
         {
-            Debug.Log("Door available");
+            //Debug.Log("Door available");
             gameObject.GetComponent<Collider2D>().enabled = true;
         }
         else
