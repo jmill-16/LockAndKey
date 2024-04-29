@@ -182,7 +182,7 @@ MonoBehaviour:
   ViewHiddenOn: {fileID: 8300000, guid: 89ac969ea140740908e0e7b110bdcf5a, type: 3}
   ViewHiddenOff: {fileID: 8300000, guid: 559f79e7f1aa64b09a77a2844d4ee5e3, type: 3}
   walking: {fileID: 8300000, guid: b88ef49b958beef418761adfab658b82, type: 3}
-  unlockDoor: {fileID: 8300000, guid: b9aadcd3ef35c4ae39e42b2ae54ffcdd, type: 3}
+  unlockDoor: {fileID: 8300000, guid: 937ce9e6b0ef94e198e5875c992cd42b, type: 3}
   enemyDamage: {fileID: 8300000, guid: 66375f03569329544a17f842ee2dc0a9, type: 3}
 --- !u!1 &6192941527197592501
 GameObject:
