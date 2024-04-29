@@ -1699,6 +1699,8 @@ MonoBehaviour:
   superSpeed: 0
   hiddenVision: 0
   phasable: 0
+  alphaLevel: 0
+  fadeSpeed: 0.25
 --- !u!1001 &173026836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2100,7 +2102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 388908021}
-  mixer: {fileID: 24100000, guid: 3d0cd29feb89f4441bb72f48fbc75f43, type: 2}
 --- !u!114 &243876107 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8735505736429271267, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
