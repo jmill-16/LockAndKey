@@ -41,9 +41,11 @@ public class Respawn : MonoBehaviour
     {
         if (transform.position.y < threshold) {
             transform.position = spawn;
-            foreach (GameObject plat in fadingPlats) {
-                plat.SetActive(true);
-                plat.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = fullAlpha;
+            if(fadingPlats.Length > 0) {
+                foreach (GameObject plat in fadingPlats) {
+                    plat.SetActive(true);
+                    plat.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = fullAlpha;
+                }
             }
         }
 
