@@ -41,7 +41,7 @@ public class ghostMove : MonoBehaviour {
               float DistToPlayer = Vector3.Distance(transform.position, target.position);
 
               if ((target != null) && (DistToPlayer <= attackRange)){
-                     transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                    transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
                     //anim.SetBool("Walk", true);
                     //flip enemy to face player direction. Wrong direction? Swap the * -1.
                     if (target.position.x > gameObject.transform.position.x){
