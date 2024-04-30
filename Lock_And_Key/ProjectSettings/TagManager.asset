@@ -22,6 +22,7 @@ TagManager:
   - Ground
   - Audio
   - enemyShooter
+  - afterDeath
   layers:
   - Default
   - TransparentFX
