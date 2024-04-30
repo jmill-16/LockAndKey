@@ -48,6 +48,16 @@ public class Respawn : MonoBehaviour
                 }
             }
         }
+        if (GetComponent<PlayerHealth>().health <=0) {
+            transform.position = spawn;
+            if(fadingPlats.Length > 0) {
+                foreach (GameObject plat in fadingPlats) {
+                    plat.SetActive(true);
+                    plat.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = fullAlpha;
+                }
+            }
+            GetComponent<PlayerHealth>().health = GetComponent<PlayerHealth>().maxHealth;
+        }
 
         // if (cd.restarted == true) {
         //     activatedCheckpoint = false;

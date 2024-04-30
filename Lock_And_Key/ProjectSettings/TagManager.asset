@@ -21,6 +21,7 @@ TagManager:
   - Key
   - Ground
   - Audio
+  - enemyShooter
   layers:
   - Default
   - TransparentFX
