@@ -48,9 +48,14 @@ public class GameInventory : MonoBehaviour {
       public GameObject item2selected;
 
       public GameHandler gameHandler;
+
+      private Animator playerAnim;
  
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
+            if (GameObject.FindWithTag("Player") != null) {
+                  playerAnim = GameObject.FindWithTag("Player").GetComponentInChildren<Animator>();
+            }
             InventoryMenu.SetActive(true);
             //CraftMenu.SetActive(false);
             InventoryDisplay();
@@ -75,6 +80,8 @@ public class GameInventory : MonoBehaviour {
                         gameHandler.reverseGravityOn = true;
                   } else if (gameHandler.levelPower == "colorview") {
                         gameHandler.viewPurpleOn = true;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVis");}
                   }
             } else {
                   gameHandler.viewHiddenOn = true;
@@ -86,6 +93,8 @@ public class GameInventory : MonoBehaviour {
                         gameHandler.reverseGravityOn = false;
                   } else if (gameHandler.levelPower == "colorview") {
                         gameHandler.viewPurpleOn = false;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVisOff");}
                   }
             }
         }
@@ -120,21 +129,27 @@ public class GameInventory : MonoBehaviour {
                         item2selected.SetActive(true);
                         if (gameHandler.levelPower == "speed") {
                               if (gameHandler.speedOn) {
+                                    //Debug.Log("green inventory - speed");
                                     item2selected.GetComponent<Image>().color = new Color(0, 255, 0);
                               } else {
-                                    item1selected.GetComponent<Image>().color = new Color(255, 255, 255);
+                                    //Debug.Log("white inventory - speed");
+                                    item2selected.GetComponent<Image>().color = new Color(255, 255, 255);
                               }
                         } else if (gameHandler.levelPower == "reversegravity") {
                               if (gameHandler.reverseGravityOn) {
+                                    //Debug.Log("green inventory - reverse grav");
                                     item2selected.GetComponent<Image>().color = new Color(0, 255, 0);
                               } else {
-                                    item1selected.GetComponent<Image>().color = new Color(255, 255, 255);
+                                    //Debug.Log("white inventory - reverse grav");
+                                    item2selected.GetComponent<Image>().color = new Color(255, 255, 255);
                               }
                         } else if (gameHandler.levelPower == "colorview") {
                               if (gameHandler.viewPurpleOn) {
+                                    //Debug.Log("green inventory - color");
                                     item2selected.GetComponent<Image>().color = new Color(0, 255, 0);
                               } else {
-                                    item1selected.GetComponent<Image>().color = new Color(255, 255, 255);
+                                    //Debug.Log("white inventory - color");
+                                    item2selected.GetComponent<Image>().color = new Color(255, 255, 255);
                               }
                         }
                   }

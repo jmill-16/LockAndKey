@@ -22,6 +22,8 @@ public class GameHandler : MonoBehaviour
 
     public bool canOpenDoor;
 
+    private Animator playerAnim;
+
     //public Animator colorAnimOn;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,9 @@ public class GameHandler : MonoBehaviour
         selectedHiddenPower = true;
         canOpenDoor = false;
         sceneName = SceneManager.GetActiveScene().name;
+        if (GameObject.FindWithTag("Player") != null) {
+            playerAnim = GameObject.FindWithTag("Player").GetComponentInChildren<Animator>();
+        }
     }
 
     public void Update() {
@@ -47,7 +52,17 @@ public class GameHandler : MonoBehaviour
                 } else if (levelPower == "reversegravity") {
                     reverseGravityOn = !reverseGravityOn;
                 } else if (levelPower == "colorview") {
-                    viewPurpleOn = !viewPurpleOn;
+                    if (viewPurpleOn) {
+                        viewPurpleOn = false;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVisOff");}
+                    } else {
+                        viewPurpleOn = true;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVis");}
+                    }
+                    //viewPurpleOn = !viewPurpleOn;
+                    //Debug.Log("viewpurple: " + viewPurpleOn);
 
                 }
             }
