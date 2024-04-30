@@ -34,6 +34,8 @@ public class DragonShoot : MonoBehaviour
        Vector2 newPosUp;
        Vector2 newPosDown;
 
+       public Transform launchPoint;
+
 
        void Start () {
               Physics2D.queriesStartInColliders = false;
@@ -91,16 +93,16 @@ public class DragonShoot : MonoBehaviour
 
                      //Flip enemy to face player direction. Wrong direction? Swap the * -1.
                      if (player.position.x > gameObject.transform.position.x){
-                            gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
+                            gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
                     } else {
-                             gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
+                             gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
                      }
 
                      //Timer for shooting projectiles
                      if (timeBtwShots <= 0) {
                             isAttacking = true;
                             //anim.SetTrigger("Attack");
-                            Instantiate (projectile, transform.position, Quaternion.identity);
+                            Instantiate (projectile, launchPoint.position, Quaternion.identity);
                             timeBtwShots = startTimeBtwShots;
                      } else {
                             timeBtwShots -= Time.deltaTime;

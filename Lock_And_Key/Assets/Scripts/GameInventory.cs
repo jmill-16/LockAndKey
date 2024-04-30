@@ -51,17 +51,19 @@ public class GameInventory : MonoBehaviour {
  
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-            InventoryMenu.SetActive(false);
+            InventoryMenu.SetActive(true);
             //CraftMenu.SetActive(false);
             InventoryDisplay();
       }
 
       void Update(){
-        if (Input.GetKeyDown("i")) {
+        /*if (Input.GetKeyDown("i")) {
             //Debug.Log("i pressed");
             OpenCloseInventory();
             //InventoryDisplay();
-        }
+        }*/
+
+
         if (Input.GetKeyDown("u") && secondpoweravail) {
             if (gameHandler.selectedHiddenPower) {
                   gameHandler.viewHiddenOn = false;
@@ -87,10 +89,11 @@ public class GameInventory : MonoBehaviour {
                   }
             }
         }
+        InventoryDisplay();
 
-        if (InvIsOpen) {
-            InventoryDisplay();
-        }
+      //   if (InvIsOpen) {
+      //       InventoryDisplay();
+      //   }
       }
 
       void InventoryDisplay(){
@@ -101,12 +104,39 @@ public class GameInventory : MonoBehaviour {
                   //Debug.Log("here1");
                   item1selected.SetActive(true);
                   item2selected.SetActive(false);
+
+                  if (gameHandler.viewHiddenOn) {
+                        //Debug.Log("white");
+                        item1selected.GetComponent<Image>().color = new Color(0, 255, 0);
+                  } else {
+                        //Debug.Log("green");
+                        item1selected.GetComponent<Image>().color = new Color(255, 255, 255);
+                  }
             }
             else {
                   //Debug.Log("here2");
                   item1selected.SetActive(false);
                   if (secondpoweravail) {
                         item2selected.SetActive(true);
+                        if (gameHandler.levelPower == "speed") {
+                              if (gameHandler.speedOn) {
+                                    item2selected.GetComponent<Image>().color = new Color(0, 255, 0);
+                              } else {
+                                    item1selected.GetComponent<Image>().color = new Color(255, 255, 255);
+                              }
+                        } else if (gameHandler.levelPower == "reversegravity") {
+                              if (gameHandler.reverseGravityOn) {
+                                    item2selected.GetComponent<Image>().color = new Color(0, 255, 0);
+                              } else {
+                                    item1selected.GetComponent<Image>().color = new Color(255, 255, 255);
+                              }
+                        } else if (gameHandler.levelPower == "colorview") {
+                              if (gameHandler.viewPurpleOn) {
+                                    item2selected.GetComponent<Image>().color = new Color(0, 255, 0);
+                              } else {
+                                    item1selected.GetComponent<Image>().color = new Color(255, 255, 255);
+                              }
+                        }
                   }
             }
 
