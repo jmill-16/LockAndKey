@@ -6,8 +6,8 @@ public class DragonShoot : MonoBehaviour
 {
     //public Animator anim;
        public float speed = 2f;
-       public float stoppingDistance = 9f; // when enemy stops moving towards player
-       public float retreatDistance = 7f; // when enemy moves away from approaching player
+       public float stoppingDistance = 5f; // when enemy stops moving towards player
+       public float retreatDistance = 3f; // when enemy moves away from approaching player
        private float timeBtwShots;
        public float startTimeBtwShots = 2;
        public GameObject projectile;
@@ -23,6 +23,17 @@ public class DragonShoot : MonoBehaviour
        public float attackRange = 10;
        public bool isAttacking = false;
        private float scaleX;
+
+       //Move Up and Down variables:
+       private bool moveUpDown = false;
+       private bool startBob = true;
+       private bool bobUp = true;
+       public float bobDistance = 3f;
+       public float bobSpeed = 2f;
+       Vector2 newBobPos;
+       Vector2 newPosUp;
+       Vector2 newPosDown;
+
 
        void Start () {
               Physics2D.queriesStartInColliders = false;
@@ -43,31 +54,40 @@ public class DragonShoot : MonoBehaviour
        }
 
        void FixedUpdate () {
-              rb.velocity = new Vector3(0f, 0f, 0f);
+       rb.velocity = new Vector3(0f, 0f, 0f);
+       if (player != null){
               float DistToPlayer = Vector3.Distance(transform.position, player.position);
-              if ((player != null) && (DistToPlayer <= attackRange)) {
+              if (DistToPlayer <= attackRange) {
                      // approach player
                      if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
+                            Debug.Log("approaching");
                             transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
                             if (isAttacking == false) {
+
                             }
+                            moveUpDown = false;
+                            startBob = true;
                      }
 
-
                      // stop moving
-                     else if (Vector2.Distance (transform.position, player.position) < stoppingDistance && Vector2.Distance (transform.position, player.position) > retreatDistance) {
+                     //else if (Vector2.Distance (transform.position, player.position) < stoppingDistance && Vector2.Distance (transform.position, player.position) > retreatDistance) {
+                     else if (Vector2.Distance (transform.position, player.position) < stoppingDistance) {
                             Debug.Log("stop moving");
                             transform.position = this.transform.position;
                             //anim.SetBool("Walk", false);
+                            moveUpDown = true;
+
                      }
 
                      // retreat from player
-                     else if (Vector2.Distance (transform.position, player.position) < retreatDistance) {
+                     /*else if (Vector2.Distance (transform.position, player.position) < retreatDistance) {
                             transform.position = Vector2.MoveTowards (transform.position, player.position, -speed * Time.deltaTime);
                             if (isAttacking == false) {
                                    //anim.SetBool("Walk", true);
                             }
-                     }
+                            moveUpDown = false;
+                            startBob =true;
+                     }*/
 
                      //Flip enemy to face player direction. Wrong direction? Swap the * -1.
                      if (player.position.x > gameObject.transform.position.x){
@@ -88,17 +108,35 @@ public class DragonShoot : MonoBehaviour
                      }
               }
        }
+       if (moveUpDown == true){
+              if (startBob==true){
+                     newPosUp = new Vector2(transform.position.x, transform.position.y + bobDistance);
+                     newPosDown = new Vector2(transform.position.x, transform.position.y - bobDistance);
+                     newBobPos = newPosUp;
+                     startBob =false;
+              }
+              float distToUp = Vector2.Distance(transform.position, newPosUp);
+              float distToDown = Vector2.Distance(transform.position, newPosDown);
+
+              //if we are on the way up, and reach the top:
+              if ((distToUp <= 0.2f)&&(bobUp)){
+                     bobUp=false;
+                     newBobPos = newPosDown;
+                     }
+              //if twe are on the way down, and reach the bottom:
+              else if ((distToDown <= 0.2f)&&(!bobUp)){
+                     bobUp=true;
+                     newBobPos = newPosUp;
+                     }
+
+              transform.position = Vector2.MoveTowards (transform.position, newBobPos, bobSpeed * Time.deltaTime);
+
+       }
+       }
 
        void OnCollisionEnter2D(Collision2D collision){
-              //if (collision.gameObject.tag == "bullet") {
-              // EnemyLives -= 1;
-              // StopCoroutine("HitEnemy");
-              // StartCoroutine("HitEnemy");
-              //}
               if (collision.gameObject.tag == "Player") {
                      gameObject.GetComponent<EnemyHealth>().TakeDamage(5);
-                     //StopCoroutine("HitEnemy");
-                     //StartCoroutine("HitEnemy");
               }
        }
 
