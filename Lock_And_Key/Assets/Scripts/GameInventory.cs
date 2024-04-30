@@ -78,6 +78,8 @@ public class GameInventory : MonoBehaviour {
                         gameHandler.speedOn = true;
                   } else if (gameHandler.levelPower == "reversegravity") {
                         gameHandler.reverseGravityOn = true;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("FlipGrav");}
                   } else if (gameHandler.levelPower == "colorview") {
                         gameHandler.viewPurpleOn = true;
                         if (playerAnim) {
@@ -91,6 +93,8 @@ public class GameInventory : MonoBehaviour {
                         gameHandler.speedOn = false;
                   } else if (gameHandler.levelPower == "reversegravity") {
                         gameHandler.reverseGravityOn = false;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("FlipGravOff");}
                   } else if (gameHandler.levelPower == "colorview") {
                         gameHandler.viewPurpleOn = false;
                         if (playerAnim) {

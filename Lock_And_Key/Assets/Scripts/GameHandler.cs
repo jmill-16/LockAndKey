@@ -50,16 +50,24 @@ public class GameHandler : MonoBehaviour
                 if (levelPower == "speed") {
                     speedOn = !speedOn;
                 } else if (levelPower == "reversegravity") {
-                    reverseGravityOn = !reverseGravityOn;
+                    if (reverseGravityOn) {
+                        reverseGravityOn = false;
+                        if (playerAnim) {
+                            playerAnim.SetTrigger("FlipGravOff");}
+                    } else {
+                        reverseGravityOn = true;
+                        if (playerAnim) {
+                            playerAnim.SetTrigger("FlipGrav");}
+                    }
                 } else if (levelPower == "colorview") {
                     if (viewPurpleOn) {
                         viewPurpleOn = false;
                         if (playerAnim) {
-                        playerAnim.SetTrigger("ColorVisOff");}
+                            playerAnim.SetTrigger("ColorVisOff");}
                     } else {
                         viewPurpleOn = true;
                         if (playerAnim) {
-                        playerAnim.SetTrigger("ColorVis");}
+                            playerAnim.SetTrigger("ColorVis");}
                     }
                     //viewPurpleOn = !viewPurpleOn;
                     //Debug.Log("viewpurple: " + viewPurpleOn);
