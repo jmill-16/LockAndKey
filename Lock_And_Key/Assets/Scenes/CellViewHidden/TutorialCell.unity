@@ -3134,6 +3134,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2804175923667122935, guid: 7e3b175b53f013c49b3b1fc6da072d5b, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 1894423426}
+    - target: {fileID: 2804175923667122935, guid: 7e3b175b53f013c49b3b1fc6da072d5b, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 8603926746787331706, guid: af09a6a42f0ae6843bc23637a5b35546, type: 3}
@@ -3913,8 +3917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: -10
-  spawn: {x: 0, y: 0, z: 0}
-  player: {fileID: 0}
+  spawn: {x: -8.135, y: -2.26, z: 0}
+  player: {fileID: 711057358}
 --- !u!1 &1627771122 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6522109830271235404, guid: d3798fd1e985f8949a89d527f0a2597f, type: 3}
@@ -4351,6 +4355,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1894423426 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6013236231400052971, guid: 7e3b175b53f013c49b3b1fc6da072d5b, type: 3}
+  m_PrefabInstance: {fileID: 768232642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2007367732
 GameObject:
   m_ObjectHideFlags: 0

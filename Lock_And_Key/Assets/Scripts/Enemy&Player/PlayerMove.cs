@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
-       private Animator anim;
-              private Renderer rend;
+      private Animator anim;
+      private Renderer rend;
 
       public Rigidbody2D rb2D;
       public bool flippedLeft;
@@ -21,8 +21,8 @@ public class PlayerMove : MonoBehaviour {
       private Vector3 hMove;
 
       void Start(){
-             anim = GetComponentInChildren<Animator>();
-              rend = GetComponentInChildren<Renderer> ();
+           anim = GetComponentInChildren<Animator>();
+           rend = GetComponentInChildren<Renderer> ();
            //animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
            audioSourse = GetComponent<AudioSource>();

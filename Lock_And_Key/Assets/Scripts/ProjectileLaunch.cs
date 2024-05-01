@@ -9,9 +9,14 @@ public class ProjectileLaunch : MonoBehaviour
 
     public float shootTime;
     public float shootCounter;
+
+    private Animator playerAnim;
     // Start is called before the first frame update
     void Start()
     {
+        if (GameObject.FindWithTag("Player") != null) {
+            playerAnim = GameObject.FindWithTag("Player").GetComponentInChildren<Animator>();
+        }
         shootCounter = shootTime;
     }
 
@@ -20,6 +25,9 @@ public class ProjectileLaunch : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1") && shootCounter <= 0)
         {
+            if (playerAnim) {
+                playerAnim.SetTrigger("Attack");
+            }
             Instantiate(projectilePrefab, launchPoint.position, Quaternion.identity);
             shootCounter = shootTime;
         }
