@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditorInternal;
 
 public class GameHandler : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class GameHandler : MonoBehaviour
     public bool canOpenDoor;
 
     private Animator playerAnim;
+    public Animator transition;
 
     //public Animator colorAnimOn;
     // Start is called before the first frame update
@@ -77,43 +79,58 @@ public class GameHandler : MonoBehaviour
         }
     }
 
+    IEnumerator TransitionTrigger() {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+    }
+
     public void StartGame() {
+        TransitionTrigger();
         SceneManager.LoadScene("IntroCutscene");
     }
 
     public void StartLevel1() {
+        TransitionTrigger();
         SceneManager.LoadScene("Level1Dungeon");
     }
 
     public void ToDungeon2(){
+        TransitionTrigger();
         SceneManager.LoadScene("Level1Dungeon2");
     }
 
     public void ToDungeon3() {
+        TransitionTrigger();
         SceneManager.LoadScene("Level1Dungeon3");
     }
 
     public void ToLevel2Start(){
+        TransitionTrigger();
         SceneManager.LoadScene("GravityTutorial");
     }
 
     public void ToLevel2Dungeon(){
+        TransitionTrigger();
         SceneManager.LoadScene("Level2Dungeon");
     }
 
     public void ToTutHiddenPower() {
+        TransitionTrigger();
         SceneManager.LoadScene("TutorialHiddenPower");
     }
 
      public void StartTutorial() {
+        TransitionTrigger();
         SceneManager.LoadScene("TutorialCell");
     }
 
     public void ToLevel3() {
+        TransitionTrigger();
         SceneManager.LoadScene("Level3Tutorial");
     }
 
     public void Credits() {
+        TransitionTrigger();
         SceneManager.LoadScene("Credits");
     }
 
