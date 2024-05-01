@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 3627533258687810252}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5fc8cfaf40e714d56aef5ae1a7caa9b3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6ab088d5eed774406a1cb5d3ddde2bea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -191,7 +191,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 0
-  healthBar: {fileID: 0}
 --- !u!61 &6590611962356984213
 BoxCollider2D:
   m_ObjectHideFlags: 0

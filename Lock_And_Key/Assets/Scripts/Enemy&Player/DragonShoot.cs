@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DragonShoot : MonoBehaviour
 {
-    //public Animator anim;
+       public Animator anim;
        public float speed = 2f;
        public float stoppingDistance = 5f; // when enemy stops moving towards player
        public float retreatDistance = 3f; // when enemy moves away from approaching player
@@ -53,7 +53,7 @@ public class DragonShoot : MonoBehaviour
               rend = GetComponentInChildren<Renderer> ();
 
               dragonPos = transform.position;
-              //anim = GetComponentInChildren<Animator> ();
+              anim = GetComponentInChildren<Animator> ();
 
               //if (GameObject.FindWithTag ("GameHandler") != null) {
               // gameHander = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
@@ -113,7 +113,7 @@ public class DragonShoot : MonoBehaviour
                      //Timer for shooting projectiles
                      if (timeBtwShots <= 0) {
                             isAttacking = true;
-                            //anim.SetTrigger("Attack");
+                            anim.SetTrigger("Attack");
                             Instantiate (projectile, launchPoint.position, Quaternion.identity);
                             timeBtwShots = startTimeBtwShots;
                      } else {

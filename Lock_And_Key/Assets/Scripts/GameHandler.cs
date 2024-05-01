@@ -51,6 +51,8 @@ public class GameHandler : MonoBehaviour
                 //Debug.Log("not hidden");
                 if (levelPower == "speed") {
                     speedOn = !speedOn;
+                    if (playerAnim) {
+                            playerAnim.SetTrigger("SpeedOn");}
                 } else if (levelPower == "reversegravity") {
                     if (reverseGravityOn) {
                         reverseGravityOn = false;

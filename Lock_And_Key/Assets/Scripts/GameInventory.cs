@@ -76,6 +76,8 @@ public class GameInventory : MonoBehaviour {
 
                   if (gameHandler.levelPower == "speed") {
                         gameHandler.speedOn = true;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("SpeedOn");}
                   } else if (gameHandler.levelPower == "reversegravity") {
                         gameHandler.reverseGravityOn = true;
                         if (playerAnim) {
@@ -91,6 +93,8 @@ public class GameInventory : MonoBehaviour {
 
                   if (gameHandler.levelPower == "speed") {
                         gameHandler.speedOn = false;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("SpeedOn");}
                   } else if (gameHandler.levelPower == "reversegravity") {
                         gameHandler.reverseGravityOn = false;
                         if (playerAnim) {
