@@ -779,7 +779,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 153524630}
-  - component: {fileID: 153524629}
   - component: {fileID: 153524631}
   m_Layer: 0
   m_Name: HiddenHandler
@@ -788,21 +787,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &153524629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153524628}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f9a8eb76773413d961244f00c799ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameHandler: {fileID: 243876107}
-  hiddenObj: {fileID: 0}
-  notDestroyed: 1
 --- !u!4 &153524630
 Transform:
   m_ObjectHideFlags: 0
@@ -860,7 +844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5378286427414095943, guid: e746cf56b2357654c925310e73ba5c9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.8
+      value: -7.76
       objectReference: {fileID: 0}
     - target: {fileID: 5378286427414095943, guid: e746cf56b2357654c925310e73ba5c9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1884,7 +1868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alphaLevel: 0
-  fadeSpeed: 1
+  fadeSpeed: 0.85
   hidden: 0
   gameHandler: {fileID: 0}
 --- !u!224 &791863289 stripped
@@ -9081,7 +9065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alphaLevel: 0
-  fadeSpeed: 1
+  fadeSpeed: 0.85
   hidden: 0
   gameHandler: {fileID: 0}
 --- !u!1 &971617310
@@ -9199,7 +9183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203247402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.5, y: -4.3, z: 2.47454}
+  m_LocalPosition: {x: 37.96, y: -3.46, z: 2.47454}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9361,7 +9345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76bd155ec5915a64e9554f431a42b779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   health: 0
   itemDrops: []
 --- !u!114 &1203247411
@@ -9707,6 +9691,10 @@ PrefabInstance:
     - target: {fileID: 2474115940848487399, guid: 3b6178ed5fc6849d18d2ca5edc277382, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252923609810193280, guid: 3b6178ed5fc6849d18d2ca5edc277382, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5683180779877293881, guid: 3b6178ed5fc6849d18d2ca5edc277382, type: 3}
       propertyPath: m_RootOrder
@@ -116732,7 +116720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alphaLevel: 0
-  fadeSpeed: 1
+  fadeSpeed: 0.85
   hidden: 0
   gameHandler: {fileID: 0}
 --- !u!1 &1794406225
@@ -116790,7 +116778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alphaLevel: 0
-  fadeSpeed: 1
+  fadeSpeed: 0.85
   hidden: 0
   gameHandler: {fileID: 0}
 --- !u!1 &1847895776
@@ -116988,7 +116976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alphaLevel: 0
-  fadeSpeed: 1
+  fadeSpeed: 0.85
   hidden: 0
   gameHandler: {fileID: 0}
 --- !u!1 &2052361380 stripped
@@ -117544,6 +117532,10 @@ PrefabInstance:
     - target: {fileID: 3966791264324222116, guid: 4aad754457c45334f91c55e42e100626, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966791264324222116, guid: 4aad754457c45334f91c55e42e100626, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4111034156899490893, guid: 4aad754457c45334f91c55e42e100626, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

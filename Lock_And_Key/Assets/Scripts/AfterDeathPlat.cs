@@ -22,7 +22,7 @@ public class AfterDeathPlat : MonoBehaviour
 
       public void Update() {
         //hiddenObj.SetActive(true);
-        if (ghostBoss.GetComponent<EnemyHealth>().health <= 0) {
+        if (ghostBoss == null) {
             ADPlat.SetActive(true);
         } else {
             ADPlat.SetActive(false);

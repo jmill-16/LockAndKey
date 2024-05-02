@@ -41,6 +41,7 @@ public class Respawn : MonoBehaviour
     {
         if (transform.position.y < threshold) {
             transform.position = spawn;
+            player.GetComponent<PlayerHealth>().health = player.GetComponent<PlayerHealth>().maxHealth;
             if(fadingPlats.Length > 0) {
                 foreach (GameObject plat in fadingPlats) {
                     plat.SetActive(true);
