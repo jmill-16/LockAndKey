@@ -46,6 +46,9 @@ public class doorToNextLevel : MonoBehaviour
             if(nextRoom == "L1D3"){
                 gameHandler.ToDungeon3();
             }
+            if(nextRoom == "DB"){
+                gameHandler.ToDungeonBoss();
+            }
         }
     }
 }

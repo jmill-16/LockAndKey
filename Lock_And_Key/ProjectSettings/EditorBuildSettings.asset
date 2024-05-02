@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DungeonSpeed/Level1Dungeon3.unity
     guid: 3160681d266c74f89ba3897c6a5adcc2
   - enabled: 1
+    path: Assets/Scenes/DungeonSpeed/DungeonBoss.unity
+    guid: 0caa32a72ae0e48448e38324ed16eae3
+  - enabled: 1
     path: Assets/Scenes/Menus/Credits.unity
     guid: a459c60c5179c480d9e635c11594aff4
   - enabled: 1

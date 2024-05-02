@@ -120268,7 +120268,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 805287916927214451, guid: df0689581a16a4bbdbbd243c9b8eb474, type: 3}
       propertyPath: nextRoom
-      value: L2D1
+      value: DB
       objectReference: {fileID: 0}
     - target: {fileID: 805287916927214451, guid: df0689581a16a4bbdbbd243c9b8eb474, type: 3}
       propertyPath: gameHandler

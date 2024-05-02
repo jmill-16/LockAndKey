@@ -136,6 +136,11 @@ public class GameHandler : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    public void ToDungeonBoss(){
+        TransitionTrigger();
+        SceneManager.LoadScene("DungeonBoss");
+    }
+
     public void QuitGame() {
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
