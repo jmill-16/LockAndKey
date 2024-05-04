@@ -18,18 +18,18 @@ public class HiddenEnemyHandler : MonoBehaviour
     void FixedUpdate()
     {
         if (hiddenPurpleEnemy) {
-            if(gamehandler.viewPurpleOn){
+            if((gamehandler.selectedHiddenPower == false) && gamehandler.viewPurpleOn){
                 hiddenPurpleEnemy.SetActive(true);
             } else {
-                 hiddenBlueEnemy.SetActive(true);
+                hiddenPurpleEnemy.SetActive(false);
             }
         }
 
         if (hiddenBlueEnemy) {
-            if(gamehandler.viewPurpleOn){
-                 hiddenBlueEnemy.SetActive(false);
+            if (!gamehandler.selectedHiddenPower && !gamehandler.viewPurpleOn){
+                hiddenBlueEnemy.SetActive(true);
             } else {
-                 hiddenBlueEnemy.SetActive(true);
+                hiddenBlueEnemy.SetActive(false);
             }
         }
     }
