@@ -68,7 +68,7 @@ public class DragonShoot : MonoBehaviour
                      // approach player
                      //if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
                      if (Vector2.Distance (dragonPos, player.position) > stoppingDistance) {
-                            Debug.Log("approaching");
+                            //Debug.Log("approaching");
                             transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
                             if (isAttacking == false) {
 
@@ -82,7 +82,7 @@ public class DragonShoot : MonoBehaviour
                      // stop moving
                      //else if (Vector2.Distance (transform.position, player.position) < stoppingDistance && Vector2.Distance (transform.position, player.position) > retreatDistance) {
                      else if (Vector2.Distance (dragonPos, player.position) < stoppingDistance && Vector2.Distance (dragonPos, player.position) > retreatDistance) {
-                            Debug.Log("stopped");
+                            //Debug.Log("stopped");
                             transform.position = this.transform.position;
                             //anim.SetBool("Walk", false);
                             moveUpDown = true;
@@ -93,7 +93,7 @@ public class DragonShoot : MonoBehaviour
                      // retreat from player
                      //else if (Vector2.Distance (transform.position, player.position) < retreatDistance) {
                      else if (Vector2.Distance (dragonPos, player.position) < retreatDistance) {
-                            Debug.Log("retreating");
+                            //Debug.Log("retreating");
                             transform.position = Vector2.MoveTowards (transform.position, player.position, -speed * Time.deltaTime);
                             //if (isAttacking == false) {
                                    //anim.SetBool("Walk", true);
