@@ -15,8 +15,10 @@ public class PlayerHealth : MonoBehaviour
     //public Animator anim;
 
     // Start is called before the first frame update
+    private Animator anim;
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         // maxHealth = health;
         health = maxHealth;
 
@@ -30,16 +32,39 @@ public class PlayerHealth : MonoBehaviour
         health -=damage;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            //Debug.Log("death animation");
+            //anim.SetTrigger("Die");
+            //Destroy(gameObject);
+
+            StartCoroutine(playerDie());
 
             //play death animation here
             //anim.SetBool("IsDead", true);
 
             //show lose screen
+        } else {
+            Debug.Log("hurt animation");
+            anim.SetTrigger("Hurt");
         }
 
         //Debug.Log("got hit");
     }
+
+
+    IEnumerator playerDie()
+
+	{
+
+		Debug.Log("death animation");
+        anim.SetTrigger("Die");
+
+
+
+		yield return new WaitForSeconds(1.5f); // wait for 5 sec
+
+		Destroy(gameObject);
+
+	}
 
 //for when we add healing to the game
     // public void Heal(int amount)

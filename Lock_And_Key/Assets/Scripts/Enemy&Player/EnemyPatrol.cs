@@ -27,7 +27,7 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(Vector3.Distance(transform.position, currentPoint.position));
+        //Debug.Log(Vector3.Distance(transform.position, currentPoint.position));
         Vector3 point = currentPoint.position - transform.position;
         if(currentPoint == pointB.transform)
         {

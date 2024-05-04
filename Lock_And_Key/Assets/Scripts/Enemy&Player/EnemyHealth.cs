@@ -15,22 +15,25 @@ public class EnemyHealth : MonoBehaviour
     private Renderer rend;
     // public Image healthBar;
     // Start is called before the first frame update
+    private Animator anim;
     void Start()
     {
         // maxHealth = health;
         health = maxHealth;
         rend = GetComponentInChildren<Renderer> ();
+        anim = GetComponentInChildren<Animator>();
 
     }
 
     public void TakeDamage(int damage)
     {
+        StartCoroutine(enemyDie());
         StopCoroutine("HitEnemy");
         StartCoroutine("HitEnemy");
         health -=damage;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            StartCoroutine(enemyDie());
             ItemDrop();
         }
     }
@@ -59,5 +62,22 @@ public class EnemyHealth : MonoBehaviour
               else yield return new WaitForSeconds(0.5f);
               rend.material.color = Color.white;
     }
+
+    IEnumerator enemyDie()
+	{
+
+		//Debug.Log("death animation");
+        if (anim != null){
+            Debug.Log("death animation");
+            anim.SetTrigger("Die");
+        }
+
+
+
+		yield return new WaitForSeconds(0.75f); // wait for 5 sec
+
+		Destroy(gameObject);
+
+	}
 
 }

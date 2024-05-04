@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1610738228}
+    - target: {fileID: 5137644887883909540, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8de19515f781f4c6e989b69604875b4e, type: 2}
     - target: {fileID: 5659012962843950295, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: pointA
       value: 
@@ -2832,11 +2836,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09aaf5a15ba7a1429c8adfaae9cb01f, type: 3}
---- !u!1 &682066729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3713992459224128960, guid: e09aaf5a15ba7a1429c8adfaae9cb01f, type: 3}
-  m_PrefabInstance: {fileID: 718563815}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &711057358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3350302730863387115, guid: 7e3b175b53f013c49b3b1fc6da072d5b, type: 3}
@@ -2978,10 +2977,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3713992459224128960, guid: e09aaf5a15ba7a1429c8adfaae9cb01f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 732421255}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09aaf5a15ba7a1429c8adfaae9cb01f, type: 3}
 --- !u!1001 &724842117
 PrefabInstance:
@@ -3062,21 +3058,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7993705532410676799, guid: e09aaf5a15ba7a1429c8adfaae9cb01f, type: 3}
   m_PrefabInstance: {fileID: 718563815}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &732421255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682066729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3991f76c46e7342b6b1d8ab8d4947c02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: -10
-  spawn: {x: 0, y: 0, z: 0}
-  player: {fileID: 0}
 --- !u!1001 &768232642
 PrefabInstance:
   m_ObjectHideFlags: 0
