@@ -7,6 +7,8 @@ public class Respawn : MonoBehaviour
     public float threshold;
     public Vector3 spawn = new Vector3(0,0,0);
 
+    // public PlayerHealth playerHealth;
+
     GameObject[] fadingPlats;
 
     Color startColor;
@@ -49,6 +51,12 @@ public class Respawn : MonoBehaviour
                 }
             }
         }
+
+        // if(playerHealth.health <= 0) {
+        //     Debug.Log("hey");
+        // }
+
+
         if (GetComponent<PlayerHealth>().health <=0) {
             transform.position = spawn;
             if(fadingPlats.Length > 0) {
@@ -60,10 +68,10 @@ public class Respawn : MonoBehaviour
             GetComponent<PlayerHealth>().health = GetComponent<PlayerHealth>().maxHealth;
         }
 
-        // if (cd.restarted == true) {
-        //     activatedCheckpoint = false;
-        //     spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
-        // }
+        if (cd.restarted == true) {
+            activatedCheckpoint = false;
+            spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
+        }
     }
 
     // public void OnTriggerEnter2D(Collider2D other) {
