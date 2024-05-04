@@ -24,15 +24,6 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    private void FixedUpdate()
-    {
-        if(!musicSource.isPlaying)
-        {
-            Debug.Log("restarting song");
-            musicSource.Play();
-        }
-    }
-
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);

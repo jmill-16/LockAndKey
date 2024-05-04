@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -21.352, y: 179.113, z: -87.565}
 --- !u!212 &645730085070553369
 SpriteRenderer:
@@ -162,10 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileRb: {fileID: 4509524977007902939}
-  speed: 10
+  speed: 6
   projectileLife: 2
   projectileCount: 0
-  playermove: {fileID: 0}
-  facingRight: 0
-  damage: 0
-  enemyHealth: {fileID: 0}
