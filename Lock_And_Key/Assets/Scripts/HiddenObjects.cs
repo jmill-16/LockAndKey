@@ -5,27 +5,33 @@ using UnityEngine;
 public class HiddenObjects : MonoBehaviour
 {
     public GameHandler gameHandler;
-    public GameObject[] hiddenObjects;
 
-    private bool hiddenOn = false;
+    private GameObject enemy;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        hiddenOn = gameHandler.viewHiddenOn;
-        switchHidden(hiddenOn);
+        if (gameHandler.viewHiddenOn) {
+            platformSwitch(true);
+        } else {
+            platformSwitch(false);
+        }
     }
 
-    private void switchHidden(bool hiddenOn)
+    private void platformSwitch(bool active)
     {
-        for (int i = 0; i < hiddenObjects.Length; i++) {
-            hiddenObjects[i].SetActive(hiddenOn);
+        foreach(Transform child in this.transform) {
+            if (child.gameObject.name == "Invisible2") {
+                child.gameObject.SetActive(!active);
+            } else {
+                child.gameObject.SetActive(active);
+            }
         }
     }
 }

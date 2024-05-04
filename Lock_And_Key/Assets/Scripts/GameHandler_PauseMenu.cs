@@ -14,7 +14,7 @@ public class GameHandler_PauseMenu : MonoBehaviour {
         private Slider sliderVolumeCtrl;
 
         void Awake (){
-                if (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Level2Dungeon") {
+                if (SceneManager.GetActiveScene() != null) {
                         audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
                         SetLevel (volumeLevel);
                 }
@@ -39,7 +39,7 @@ public class GameHandler_PauseMenu : MonoBehaviour {
                                 Pause();
                         }
                 }
-                if (pauseMenuUI.activeSelf == true && (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Level2Dungeon")){
+                if (pauseMenuUI.activeSelf == true && (SceneManager.GetActiveScene() != null)) {
                         GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
                         sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
                         SetLevel(sliderVolumeCtrl.value);
@@ -60,7 +60,7 @@ public class GameHandler_PauseMenu : MonoBehaviour {
         }
 
         public void SetLevel (float sliderValue){
-                if (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Level2Dungeon") {
+                if (SceneManager.GetActiveScene() != null) {
                         audioManager.getMusic().volume = sliderValue;
                         audioManager.getSFX().volume = sliderValue;
                         volumeLevel = sliderValue;

@@ -8,6 +8,7 @@ public class checkpoint : MonoBehaviour
     public GameObject gameHandler;
     Countdown cd;
     Respawn rsp;
+    GravityRespawn grsp;
     public bool isActivated = false;
     SpriteRenderer sp;
     public Sprite unactivated;
@@ -19,6 +20,9 @@ public class checkpoint : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
         rsp = player.GetComponent<Respawn>();
+        if (rsp == null) {
+            grsp = player.GetComponent<GravityRespawn>();
+        }
         sp = GetComponent<SpriteRenderer>();
         cd = gameHandler.GetComponent<Countdown>();
     }
@@ -34,7 +38,11 @@ public class checkpoint : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player"){
-            rsp.spawn = this.transform.position;
+            if (rsp == null) {
+                grsp.spawn = this.transform.position;
+            } else {
+                rsp.spawn = this.transform.position;
+            }
             sp.sprite = activated;
         }
 
@@ -42,6 +50,10 @@ public class checkpoint : MonoBehaviour
 
     void resetCheckpoint() {
         sp.sprite = unactivated;
-        rsp.spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
+        if (rsp == null) {
+                grsp.spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
+        } else {
+                rsp.spawn = GameObject.FindGameObjectWithTag("SpawnPoint").transform.position;
+        }
     }
 }
