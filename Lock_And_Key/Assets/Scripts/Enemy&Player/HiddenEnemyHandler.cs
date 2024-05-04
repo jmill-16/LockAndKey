@@ -7,7 +7,8 @@ public class HiddenEnemyHandler : MonoBehaviour
     // Start is called before the first frame update
     public GameHandler gamehandler;
 
-    public GameObject hiddenEnemy;
+    public GameObject hiddenPurpleEnemy;
+    public GameObject hiddenBlueEnemy;
     void Start()
     {
         gamehandler = GameObject.FindGameObjectWithTag("GameHandler").GetComponent<GameHandler>();
@@ -16,12 +17,20 @@ public class HiddenEnemyHandler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (hiddenEnemy) {
+        if (hiddenPurpleEnemy) {
             if(gamehandler.viewPurpleOn){
-            hiddenEnemy.SetActive(true);
+                hiddenPurpleEnemy.SetActive(true);
             } else {
-            hiddenEnemy.SetActive(false);
+                 hiddenBlueEnemy.SetActive(true);
+            }
         }
+
+        if (hiddenBlueEnemy) {
+            if(gamehandler.viewPurpleOn){
+                 hiddenBlueEnemy.SetActive(false);
+            } else {
+                 hiddenBlueEnemy.SetActive(true);
+            }
         }
     }
 }
