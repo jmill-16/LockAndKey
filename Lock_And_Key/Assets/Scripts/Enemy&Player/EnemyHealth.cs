@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
 
-    public int maxHealth = 100;
+    public float maxHealth = 100;
     // public int maxHealth;
-    public int health;
+    public float health;
 
     public GameObject[] itemDrops;
 
