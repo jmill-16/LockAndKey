@@ -19,6 +19,15 @@ public class CodePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for (int i = 1; i < 10; ++i )
+        {
+            if ( Input.GetKeyDown( "" + i ) )
+            {
+                //Debug.Log(i);
+                AddDigit(i.ToString());
+                
+            }
+        }
         codeText.text = codeTextValue;
 
         if (codeTextValue == "5432") {
