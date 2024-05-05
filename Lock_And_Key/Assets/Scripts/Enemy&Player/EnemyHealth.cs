@@ -16,9 +16,12 @@ public class EnemyHealth : MonoBehaviour
     // public Image healthBar;
     // Start is called before the first frame update
     private Animator anim;
+
+    public bool alive;
     void Start()
     {
         // maxHealth = health;
+        alive = true;
         health = maxHealth;
         rend = GetComponentInChildren<Renderer> ();
         anim = GetComponentInChildren<Animator>();
@@ -27,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        // StartCoroutine(enemyDie());
+        //StartCoroutine(enemyDie());
         StopCoroutine("HitEnemy");
         StartCoroutine("HitEnemy");
         health -=damage;
@@ -65,6 +68,7 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator enemyDie()
 	{
+        alive = false;
 
 		//Debug.Log("death animation");
         if (anim != null){
@@ -72,7 +76,7 @@ public class EnemyHealth : MonoBehaviour
             anim.SetTrigger("Die");
         }
         
-		yield return new WaitForSeconds(0.75f); // wait for 5 sec
+		yield return new WaitForSeconds(3f); //3f
 
 		Destroy(gameObject);
 
