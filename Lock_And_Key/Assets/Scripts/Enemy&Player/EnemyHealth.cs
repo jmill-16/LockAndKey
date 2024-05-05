@@ -27,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        StartCoroutine(enemyDie());
+        // StartCoroutine(enemyDie());
         StopCoroutine("HitEnemy");
         StartCoroutine("HitEnemy");
         health -=damage;
@@ -71,9 +71,7 @@ public class EnemyHealth : MonoBehaviour
             Debug.Log("death animation");
             anim.SetTrigger("Die");
         }
-
-
-
+        
 		yield return new WaitForSeconds(0.75f); // wait for 5 sec
 
 		Destroy(gameObject);

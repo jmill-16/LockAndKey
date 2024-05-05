@@ -5,32 +5,24 @@ using UnityEngine;
 public class ConnorProjectileLaunch : MonoBehaviour
 {
     public GameObject projectilePrefab;
-    public Transform launchPoint;
+    public Transform firePoint; 
+    public float projectileSpeed = 10f; 
 
-    public float shootTime;
-    public float shootCounter;
-
-    private Animator playerAnim;
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (GameObject.FindWithTag("Player") != null) {
-            playerAnim = GameObject.FindWithTag("Player").GetComponentInChildren<Animator>();
-        }
-        shootCounter = shootTime;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1") && shootCounter <= 0)
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (playerAnim) {
-                playerAnim.SetTrigger("Attack");
-            }
-            Instantiate(projectilePrefab, launchPoint.position, Quaternion.identity);
-            shootCounter = shootTime;
+            FireProjectile();
         }
-        shootCounter -= Time.deltaTime;
+    }
+
+    void FireProjectile()
+    {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePosition - firePoint.position).normalized;
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+
+        rb.velocity = direction * projectileSpeed;
     }
 }
