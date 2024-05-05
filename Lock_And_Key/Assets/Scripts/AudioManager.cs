@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+
+    public GameOver GameOver;
+
+
     [Header("------------- Audio Source ---------------")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
@@ -20,8 +24,22 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        if(GameOver.gameisover == true)
+        {
+            Debug.Log("stop playing music");
+            musicSource.Stop();
+        }
         musicSource.clip = background;
         musicSource.Play();
+    }
+
+    private void Update()
+    {
+        if(GameOver.gameisover == true)
+        {
+            Debug.Log("stop playing music");
+            musicSource.Stop();
+        }
     }
 
     public void PlaySFX(AudioClip clip)
