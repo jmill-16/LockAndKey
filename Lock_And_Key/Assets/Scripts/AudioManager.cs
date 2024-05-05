@@ -6,13 +6,14 @@ public class AudioManager : MonoBehaviour
 {
 
     public GameOver GameOver;
-
+    public bool isaudioplaying = false;
 
     [Header("------------- Audio Source ---------------")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
 
     [Header("------------- Audio Clip ---------------")]
+    public AudioClip mainmenumusic;
     public AudioClip background;
     public AudioClip gravityOn;
     public AudioClip gravityOFF;
@@ -28,17 +29,23 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("stop playing music");
             musicSource.Stop();
+            musicSource.clip = mainmenumusic;
+            musicSource.Play();
+        } else {
+            musicSource.clip = background;
+            musicSource.Play();
         }
-        musicSource.clip = background;
-        musicSource.Play();
     }
 
     private void Update()
     {
-        if(GameOver.gameisover == true)
+        if(GameOver.gameisover == true && !isaudioplaying)
         {
+            isaudioplaying = true;
             Debug.Log("stop playing music");
             musicSource.Stop();
+            musicSource.clip = mainmenumusic;
+            musicSource.Play();
         }
     }
 
