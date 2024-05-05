@@ -26,6 +26,7 @@ TagManager:
   - SelectSlot2
   - SelectSlot1
   - bossWall
+  - Projectile
   layers:
   - Default
   - TransparentFX

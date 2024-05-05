@@ -22,11 +22,11 @@ public class GravityPowerup : MonoBehaviour
 
     public void switchGravity() {
         if (switched == true) {
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = -1;
             playerSprite.flipY = true;
-            Physics2D.gravity = new Vector2(0, 9.8f);
         } else {
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
             playerSprite.flipY = false;
-            Physics2D.gravity = new Vector2(0, -9.8f);
         }
     }
 }

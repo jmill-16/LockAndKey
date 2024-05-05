@@ -8,12 +8,22 @@ public class ConnorProjectileLaunch : MonoBehaviour
     public Transform firePoint; 
     public float projectileSpeed = 10f; 
 
+    public float shootTime;
+    public float shootCounter;
+
+    void Start()
+    {
+        shootCounter = shootTime;
+    }
+
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            FireProjectile();
+        if (Input.GetButtonDown("Fire1") && shootCounter <= 0) {
+                GetComponentInChildren<Animator>().SetTrigger("Attack");
+                FireProjectile();
+                shootCounter = shootTime;
         }
+        shootCounter -= Time.deltaTime;
     }
 
     void FireProjectile()

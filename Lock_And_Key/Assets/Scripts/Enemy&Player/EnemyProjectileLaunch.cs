@@ -11,12 +11,13 @@ public class EnemyProjectileLaunch : MonoBehaviour
     public float shootCounter;
 
     private Animator enemyAnim;
+    public float projectileSpeed = 10f; 
     // Start is called before the first frame update
     void Start()
     {
-        // if (GameObject.FindWithTag("Player") != null) {
-            // playerAnim = GameObject.FindWithTag("Player").GetComponentInChildren<Animator>();
-        // }
+        if (GameObject.FindWithTag("Enemy") != null) {
+            enemyAnim = GameObject.FindWithTag("Enemy").GetComponentInChildren<Animator>();
+        }
         shootCounter = shootTime;
     }
 
@@ -25,11 +26,15 @@ public class EnemyProjectileLaunch : MonoBehaviour
     {
         if(shootCounter <= 0)
         {
-            //if (playerAnim) {
-                //playerAnim.SetTrigger("Attack");
-            //}
+            if (enemyAnim) {
+                enemyAnim.SetTrigger("Fire");
+            }
             for (int i = 0; i < launchPoints.Length; i++) {
-                Instantiate(projectilePrefab, launchPoints[i].position, Quaternion.identity);
+                Vector2 direction = (launchPoints[i].position - this.gameObject.transform.position).normalized;
+                GameObject projectile = Instantiate(projectilePrefab, launchPoints[i].position, Quaternion.identity);
+                Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+
+                rb.velocity = direction * projectileSpeed;
             }
             shootCounter = shootTime;
         }
