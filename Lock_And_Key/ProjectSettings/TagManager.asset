@@ -23,6 +23,9 @@ TagManager:
   - Audio
   - enemyShooter
   - afterDeath
+  - SelectSlot2
+  - SelectSlot1
+  - bossWall
   layers:
   - Default
   - TransparentFX

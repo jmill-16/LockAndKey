@@ -15,7 +15,7 @@ public class ghostMove : MonoBehaviour {
        public float attackRange = 10;
        public bool isAttacking = false;
        private float scaleX;
-
+       public GameObject renderer;
 
     //    public GameObject projectilePrefab;
     //    public Transform launchPoint;
@@ -45,9 +45,9 @@ public class ghostMove : MonoBehaviour {
                     //anim.SetBool("Walk", true);
                     //flip enemy to face player direction. Wrong direction? Swap the * -1.
                     if (target.position.x > gameObject.transform.position.x){
-                                   gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
+                                    renderer.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
                     } else {
-                                    gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
+                                    renderer.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
                     }
               }
                //else { anim.SetBool("Walk", false);}
