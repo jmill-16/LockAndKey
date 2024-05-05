@@ -124,6 +124,7 @@ MonoBehaviour:
   maxHealth: 50
   health: 50
   itemDrops: []
+  alive: 0
 --- !u!114 &2607184249691002505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5217188549632744631}
   - component: {fileID: 7337134556061908073}
-  - component: {fileID: 5630658328021605939}
+  - component: {fileID: 596944659686873881}
   m_Layer: 0
   m_Name: DragonBoss
   m_TagString: Untagged
@@ -263,7 +264,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5630658328021605939
+--- !u!95 &596944659686873881
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -273,7 +274,7 @@ Animator:
   m_GameObject: {fileID: 7433266135762870072}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d5dc5d83d0504a6382231bf2997a8f5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9495ca16a35114036a4bda3116254772, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
