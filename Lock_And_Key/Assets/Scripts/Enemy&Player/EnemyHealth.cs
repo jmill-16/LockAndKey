@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        StartCoroutine(enemyDie());
+        //StartCoroutine(enemyDie());
         StopCoroutine("HitEnemy");
         StartCoroutine("HitEnemy");
         health -=damage;

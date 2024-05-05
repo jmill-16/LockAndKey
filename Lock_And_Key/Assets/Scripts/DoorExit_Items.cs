@@ -10,13 +10,16 @@ public class DoorExit_Items : MonoBehaviour
     public string NextLevel;
     public AudioSource audioSource;
 
+    public AudioManager audioManager;
+
     private bool isAudioPlaying = false;
 
     void Start()
     {
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
         gameObject.GetComponent<Collider2D>().enabled = false;
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
+        audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -55,10 +58,14 @@ public class DoorExit_Items : MonoBehaviour
     IEnumerator PlayAudioAndLoadNextLevel()
     {
         isAudioPlaying = true;
-        audioSource.Play();
+        //audioSource.Play();
+
+        audioManager.SFXSource.clip = audioManager.unlockDoor;
+        audioManager.SFXSource.Play();
 
         // Wait for the duration of the audio clip
-        yield return new WaitForSeconds(audioSource.clip.length);
+        //yield return new WaitForSeconds(audioSource.clip.length);
+        yield return new WaitForSeconds(audioManager.SFXSource.clip.length);
 
         // Load the next level
         SceneManager.LoadScene(NextLevel);
