@@ -1309,6 +1309,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6381197773709073294, guid: 68b8f25512c065e449664483aa853b8b, type: 3}
   m_PrefabInstance: {fileID: 1922930689}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &764095551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6333677894577732796, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
+  m_PrefabInstance: {fileID: 1446764303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &840080042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1419,6 +1424,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 993143355}
+--- !u!114 &872272435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872272428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26902e41c1ce466b9bbade3bde50854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameHandler: {fileID: 0}
+  canvaskeyicon: {fileID: 764095551}
 --- !u!1001 &922888005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4859,6 +4878,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3224968718690795967, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 872272432}
+    - targetCorrespondingSourceObject: {fileID: 3224968718690795967, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 872272435}
   m_SourcePrefab: {fileID: 100100000, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
 --- !u!114 &1705012422 stripped
 MonoBehaviour:
