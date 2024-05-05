@@ -6,8 +6,8 @@ public class DragonShoot : MonoBehaviour
 {
        public Animator anim;
        public float speed = 2f;
-       public float stoppingDistance = 5f; // when enemy stops moving towards player
-       public float retreatDistance = 3f; // when enemy moves away from approaching player
+       public float stoppingDistance = 2f; // when enemy stops moving towards player 5f
+       public float retreatDistance = 1f; // when enemy moves away from approaching player 3f
        private float timeBtwShots;
        public float startTimeBtwShots = 2;
        public GameObject projectile;
@@ -28,7 +28,7 @@ public class DragonShoot : MonoBehaviour
        private bool moveUpDown = false;
        private bool startBob = true;
        private bool bobUp = true;
-       public float bobDistance = 3f;
+       public float bobDistance = 1f;//3f
        public float bobSpeed = 2f;
        Vector2 newBobPos;
        Vector2 newPosUp;
