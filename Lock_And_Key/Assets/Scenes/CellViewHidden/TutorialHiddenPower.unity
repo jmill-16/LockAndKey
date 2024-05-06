@@ -414,7 +414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3140659345107678955, guid: 69a83b26d87704941a61593793f3d5af, type: 3}
       propertyPath: lines.Array.data[2]
-      value: Press 'i' to open the inventory and Press 'o' to toggle current power
+      value: Press 'o' to toggle current power
       objectReference: {fileID: 0}
     - target: {fileID: 3140659345107678955, guid: 69a83b26d87704941a61593793f3d5af, type: 3}
       propertyPath: lines.Array.data[3]
