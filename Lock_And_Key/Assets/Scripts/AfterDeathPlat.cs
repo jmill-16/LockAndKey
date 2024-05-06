@@ -11,12 +11,12 @@ public class AfterDeathPlat : MonoBehaviour
       //public playerVFX playerPowerupVFX;
     
     public GameObject ADPlat;
+    public GameObject ADArrow;
 
     public bool notDestroyed = true;
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-            ADPlat = GameObject.FindWithTag("afterDeath");
             ghostBoss = GameObject.FindWithTag("Enemy");
       }
 
@@ -24,8 +24,10 @@ public class AfterDeathPlat : MonoBehaviour
         //hiddenObj.SetActive(true);
         if (ghostBoss == null) {
             ADPlat.SetActive(true);
+            ADArrow.SetActive(true);
         } else {
             ADPlat.SetActive(false);
+            ADArrow.SetActive(false);
         }
       }
 }

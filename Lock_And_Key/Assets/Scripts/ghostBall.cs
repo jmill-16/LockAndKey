@@ -32,7 +32,7 @@ public class ghostBall : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player")){
-            other.gameObject.GetComponent<PlayerHealth>().health -= 20;
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(20);
             Destroy(gameObject);
         }
     }

@@ -42,6 +42,7 @@ public class Respawn : MonoBehaviour
         if (transform.position.y < threshold) {
             transform.position = spawn;
             if (player.GetComponent<PlayerHealth>() != null) {
+                player.GetComponent<PlayerHealth>().TakeDamage(100);
                 player.GetComponent<PlayerHealth>().health = player.GetComponent<PlayerHealth>().maxHealth;
             }
             

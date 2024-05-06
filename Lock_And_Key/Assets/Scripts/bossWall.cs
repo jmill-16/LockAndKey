@@ -24,14 +24,16 @@ public class bossWall : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(player.GetComponent<PlayerHealth>().health <= 0) {
-            visible = false;
-            compCol.isTrigger = true;
-        }
-        if(player.transform.position.y < rsp.threshold){
-            visible = false;
-            compCol.isTrigger = true;
+    {   if(player != null){ 
+            if(player.GetComponent<PlayerHealth>().health <= 0) {
+                Debug.Log("respawning");
+                visible = false;
+                compCol.isTrigger = true;
+            }
+            if(player.transform.position.y < rsp.threshold){
+                visible = false;
+                compCol.isTrigger = true;
+            }
         }
         if(visible == true) {
             tr.enabled = true;

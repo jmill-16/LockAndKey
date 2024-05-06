@@ -15,18 +15,20 @@ public class ghostAttack : MonoBehaviour
     }
 
     void Update() {
-        
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance < 8) {
-            if (!shooting) {
-                burstTimer += Time.deltaTime;
-            }            
-            if (burstTimer >= 1) {
-                StartCoroutine(DelayBetweenBursts());
-                burstTimer = 0;
-                shooting = true;
+        if(player != null) {
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance < 8) {
+                if (!shooting) {
+                    burstTimer += Time.deltaTime;
+                }            
+                if (burstTimer >= 1) {
+                    StartCoroutine(DelayBetweenBursts());
+                    burstTimer = 0;
+                    shooting = true;
+                }
             }
         }
+        
     }
 
     void shoot() {
