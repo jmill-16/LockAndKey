@@ -76,7 +76,7 @@ public class EnemyHealth : MonoBehaviour
             anim.SetTrigger("Die");
         }
         
-		yield return new WaitForSeconds(3f); //3f
+		yield return new WaitForSeconds(1.5f); //3f
 
 		Destroy(gameObject);
 
