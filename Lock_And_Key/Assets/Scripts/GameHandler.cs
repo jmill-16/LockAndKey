@@ -47,6 +47,15 @@ public class GameHandler : MonoBehaviour
             if (selectedHiddenPower) {
                 //Debug.Log("hidden");
                 viewHiddenOn = !viewHiddenOn;
+                if (playerAnim) {
+                    if (viewHiddenOn) {
+                            playerAnim.SetTrigger("ColorVis");
+                    }
+                    else {
+                        Debug.Log("turn off");
+                        playerAnim.SetTrigger("ColorVisOff");
+                    }
+                }
             } else {
                 //Debug.Log("not hidden");
                 if (levelPower == "speed") {
