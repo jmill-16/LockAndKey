@@ -160,7 +160,7 @@ Transform:
   - {fileID: 5510587690943583585}
   - {fileID: 4633763406572065166}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6874656161615614746
 MonoBehaviour:
@@ -174,8 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22d7d28bfcb7f041bf213878b34b0ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: {fileID: 0}
+  isaudioplaying: 0
   musicSource: {fileID: 2654129010388541587}
   SFXSource: {fileID: 788071028818920510}
+  mainmenumusic: {fileID: 8300000, guid: 60aca7a01032f491288ddec78b22a2d0, type: 3}
   background: {fileID: 8300000, guid: 6163a0a50d2677f4d90e93500de2e96f, type: 3}
   gravityOn: {fileID: 8300000, guid: b46e41ce0f94b4056a966aa035693bd8, type: 3}
   gravityOFF: {fileID: 8300000, guid: 2e5b716ec9c7445d48059c7f1c5293b7, type: 3}
