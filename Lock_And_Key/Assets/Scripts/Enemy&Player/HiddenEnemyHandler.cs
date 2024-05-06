@@ -9,6 +9,9 @@ public class HiddenEnemyHandler : MonoBehaviour
 
     public GameObject hiddenPurpleEnemy;
     public GameObject hiddenBlueEnemy;
+
+    public GameObject purpleHealthBar;
+    public GameObject blueHealthBar;
     void Start()
     {
         gamehandler = GameObject.FindGameObjectWithTag("GameHandler").GetComponent<GameHandler>();
@@ -31,6 +34,15 @@ public class HiddenEnemyHandler : MonoBehaviour
             } else {
                 hiddenBlueEnemy.SetActive(false);
             }
+        }
+
+        if (!gamehandler.selectedHiddenPower && gamehandler.viewPurpleOn) {
+            purpleHealthBar.SetActive(true);
+            blueHealthBar.SetActive(false);
+        } else if (!gamehandler.selectedHiddenPower && !gamehandler.viewPurpleOn) {
+            purpleHealthBar.SetActive(false);
+            blueHealthBar.SetActive(true);
+
         }
     }
 }

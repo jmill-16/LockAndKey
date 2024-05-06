@@ -20,7 +20,7 @@ public class DragonShoot : MonoBehaviour
        private Renderer rend;
        //private GameHandler gameHandler;
 
-       public float attackRange = 10;
+       public float attackRange = 1000f;
        public bool isAttacking = false;
        private float scaleX;
 
@@ -64,7 +64,7 @@ public class DragonShoot : MonoBehaviour
        rb.velocity = new Vector3(0f, 0f, 0f);
        if (player != null){
               float DistToPlayer = Vector3.Distance(transform.position, player.position);
-              if (DistToPlayer <= attackRange) {
+              //if (DistToPlayer <= attackRange) {
                      // approach player
                      //if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
                      if (Vector2.Distance (dragonPos, player.position) > stoppingDistance) {
@@ -82,7 +82,7 @@ public class DragonShoot : MonoBehaviour
                      // stop moving
                      //else if (Vector2.Distance (transform.position, player.position) < stoppingDistance && Vector2.Distance (transform.position, player.position) > retreatDistance) {
                      else if (Vector2.Distance (dragonPos, player.position) < stoppingDistance && Vector2.Distance (dragonPos, player.position) > retreatDistance) {
-                            //Debug.Log("stopped");
+                            Debug.Log("stopped");
                             transform.position = this.transform.position;
                             //anim.SetBool("Walk", false);
                             moveUpDown = true;
@@ -93,7 +93,7 @@ public class DragonShoot : MonoBehaviour
                      // retreat from player
                      //else if (Vector2.Distance (transform.position, player.position) < retreatDistance) {
                      else if (Vector2.Distance (dragonPos, player.position) < retreatDistance) {
-                            //Debug.Log("retreating");
+                            Debug.Log("retreating");
                             transform.position = Vector2.MoveTowards (transform.position, player.position, -speed * Time.deltaTime);
                             //if (isAttacking == false) {
                                    //anim.SetBool("Walk", true);
@@ -120,9 +120,10 @@ public class DragonShoot : MonoBehaviour
                             timeBtwShots -= Time.deltaTime;
                             isAttacking = false;
                      }
-              } else {
+              /*} else {
+                     //Debug.Log("out of attack range");
                      dragonPos = transform.position;
-              }
+              }*/
        }
        if (moveUpDown == true){
               if (startBob==true){
@@ -150,11 +151,11 @@ public class DragonShoot : MonoBehaviour
        }
        }
 
-       void OnCollisionEnter2D(Collision2D collision){
-              if (collision.gameObject.tag == "Player") {
-                     gameObject.GetComponent<EnemyHealth>().TakeDamage(5);
-              }
-       }
+       // void OnCollisionEnter2D(Collision2D collision){
+       //        if (collision.gameObject.tag == "Player") {
+       //               gameObject.GetComponent<EnemyHealth>().TakeDamage(10);
+       //        }
+       // }
 
        IEnumerator HitEnemy(){
               // color values are R, G, B, and alpha, each divided by 100
@@ -169,7 +170,7 @@ public class DragonShoot : MonoBehaviour
 
       //DISPLAY the range of enemy's attack when selected in the Editor
        void OnDrawGizmosSelected(){
-              //Gizmos.DrawWireSphere(transform.position, attackRange);
-              Gizmos.DrawWireSphere(transform.position, 9);
+              Gizmos.DrawWireSphere(transform.position, attackRange);
+              //Gizmos.DrawWireSphere(transform.position, 9);
        }
 }
