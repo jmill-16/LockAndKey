@@ -510,6 +510,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1957976866}
     m_Modifications:
+    - target: {fileID: 312270999386275745, guid: d198381097ef5ed4a826a2adc689bb48, type: 3}
+      propertyPath: playerhealth
+      value: 
+      objectReference: {fileID: 1401615330}
     - target: {fileID: 2729947365965470717, guid: d198381097ef5ed4a826a2adc689bb48, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
