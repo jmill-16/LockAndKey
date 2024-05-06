@@ -57,6 +57,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GardenColorSwitch/GardenBoss.unity
     guid: f6a3fbc00109d492ca4db248ae60c415
   - enabled: 1
-    path: Assets/Scenes/WinScence.unity
+    path: Assets/Scenes/Menus/WinScence.unity
     guid: e23561b592c8942a38b0ec171a9176cc
   m_configObjects: {}
