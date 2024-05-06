@@ -41,7 +41,10 @@ public class Respawn : MonoBehaviour
     {
         if (transform.position.y < threshold) {
             transform.position = spawn;
-            player.GetComponent<PlayerHealth>().health = player.GetComponent<PlayerHealth>().maxHealth;
+            if (player.GetComponent<PlayerHealth>() != null) {
+                player.GetComponent<PlayerHealth>().health = player.GetComponent<PlayerHealth>().maxHealth;
+            }
+            
             if(fadingPlats.Length > 0) {
                 foreach (GameObject plat in fadingPlats) {
                     plat.SetActive(true);
@@ -49,15 +52,17 @@ public class Respawn : MonoBehaviour
                 }
             }
         }
-        if (GetComponent<PlayerHealth>().health <=0) {
-            transform.position = spawn;
-            if(fadingPlats.Length > 0) {
-                foreach (GameObject plat in fadingPlats) {
-                    plat.SetActive(true);
-                    plat.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = fullAlpha;
+        if (GetComponent<PlayerHealth>() != null) {
+            if (GetComponent<PlayerHealth>().health <=0) {
+                transform.position = spawn;
+                if(fadingPlats.Length > 0) {
+                    foreach (GameObject plat in fadingPlats) {
+                        plat.SetActive(true);
+                        plat.transform.GetChild(0).GetComponent<SpriteRenderer>().material.color = fullAlpha;
+                    }
                 }
+                GetComponent<PlayerHealth>().health = GetComponent<PlayerHealth>().maxHealth;
             }
-            GetComponent<PlayerHealth>().health = GetComponent<PlayerHealth>().maxHealth;
         }
 
         // if (cd.restarted == true) {
