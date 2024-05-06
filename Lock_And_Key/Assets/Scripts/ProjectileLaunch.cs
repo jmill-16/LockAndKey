@@ -29,8 +29,16 @@ public class ProjectileLaunch : MonoBehaviour
                 playerAnim.SetTrigger("Attack");
             }
             Instantiate(projectilePrefab, launchPoint.position, Quaternion.identity);
+            //FireProjectile();
             shootCounter = shootTime;
         }
         shootCounter -= Time.deltaTime;
+
+        // void FireProjectile()
+        // {
+        //     Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //     Vector2 direction = (mousePosition - launchPoint.position).normalized;
+        //     GameObject projectile = Instantiate(projectilePrefab, launchPoint.position, Quaternion.identity);
+        // }
     }
 }

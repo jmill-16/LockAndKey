@@ -2567,6 +2567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3346714383070380901, guid: 81a8d0f0f1a70884ba419d91eab78b89, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 937ce9e6b0ef94e198e5875c992cd42b, type: 3}
     - target: {fileID: 6503702460974145084, guid: 81a8d0f0f1a70884ba419d91eab78b89, type: 3}
       propertyPath: NextLevel
       value: Level1Dungeon2
