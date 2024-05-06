@@ -9318,6 +9318,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 414682571}
     m_Modifications:
+    - target: {fileID: 3512866377675227815, guid: d44093389571d3e4a8ae0f74495bf44f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 243876107}
+    - target: {fileID: 3512866377675227815, guid: d44093389571d3e4a8ae0f74495bf44f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 5138614009476208461, guid: d44093389571d3e4a8ae0f74495bf44f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9405,6 +9413,14 @@ PrefabInstance:
     - target: {fileID: 5583593067609499437, guid: d44093389571d3e4a8ae0f74495bf44f, type: 3}
       propertyPath: m_Name
       value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870126922097563603, guid: d44093389571d3e4a8ae0f74495bf44f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 243876107}
+    - target: {fileID: 6870126922097563603, guid: d44093389571d3e4a8ae0f74495bf44f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: returnToMM
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
