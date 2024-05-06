@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/RoyalBallGravity/Level2Dungeon.unity
     guid: b2388e3f6f424bd48bc8f4d55289db27
   - enabled: 1
+    path: Assets/Scenes/RoyalBallGravity/Level2Boss.unity
+    guid: 78ea0d4a9fdd5e94c97612309c5e9cc1
+  - enabled: 1
     path: Assets/Scenes/GardenColorSwitch/Level3Tutorial.unity
     guid: b1547c6d4e5e344f8874146d90ba5b41
   - enabled: 1

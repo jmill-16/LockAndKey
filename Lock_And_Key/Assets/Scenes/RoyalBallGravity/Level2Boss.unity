@@ -2190,7 +2190,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8603926746787331706, guid: 156386ab044429e459608f1333aa1941, type: 3}
   firePoint: {fileID: 1744126897}
   projectileSpeed: 10
-  shootTime: 0
+  shootTime: 0.5
   shootCounter: 0
 --- !u!1001 &1402567530
 PrefabInstance:
