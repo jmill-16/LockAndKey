@@ -821,6 +821,10 @@ PrefabInstance:
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 1524780757}
+    - target: {fileID: 6874656161615614746, guid: d7d1c7ea78c185e4abbe00ff16ed5ba6, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 8300000, guid: f458ee03359e4e047986ed4482ea384d, type: 3}
     - target: {fileID: 8051842211341135488, guid: d7d1c7ea78c185e4abbe00ff16ed5ba6, type: 3}
       propertyPath: m_RootOrder
       value: 4
