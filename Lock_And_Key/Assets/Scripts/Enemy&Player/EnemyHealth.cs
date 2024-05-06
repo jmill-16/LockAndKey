@@ -53,7 +53,7 @@ public class EnemyHealth : MonoBehaviour
     private void ItemDrop()
     {
         for (int i = 0; i < itemDrops.Length; i++) {
-            Debug.Log("dropped");
+            //Debug.Log("dropped");
             Instantiate(itemDrops[i], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
     }

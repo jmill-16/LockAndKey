@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class WinScene : MonoBehaviour
 {
+    public bool gameisover = true;
     public void Setup()
     {
         gameObject.SetActive(true);
