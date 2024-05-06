@@ -16,6 +16,7 @@ public class FadingTilemap : MonoBehaviour
         alphaLevel = 1f;
         player = GameObject.FindGameObjectWithTag("Player");
         OGColor = GetComponent<TilemapRenderer>().material.color;
+        Debug.Log(OGColor.r + "   " + OGColor.g + "    " + OGColor.b + "   " + OGColor.a);
         rsp = player.GetComponent<Respawn>();
         // rndr = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
@@ -24,7 +25,10 @@ public class FadingTilemap : MonoBehaviour
     void Update()
     {
         if(player.transform.position.y < rsp.threshold) {
+            GetComponent<TilemapRenderer>().enabled = true;
+            GetComponent<TilemapCollider2D>().enabled = true;
             GetComponent<TilemapRenderer>().material.color = OGColor;
+            Debug.Log("Renderer on");
         }
     }
 
@@ -44,6 +48,7 @@ public class FadingTilemap : MonoBehaviour
             yield return null;
         }
 
-        gameObject.SetActive(false);
+        GetComponent<TilemapRenderer>().enabled = false;
+        GetComponent<TilemapCollider2D>().enabled = false;
     }
 }
