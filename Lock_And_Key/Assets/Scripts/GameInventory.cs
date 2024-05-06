@@ -74,6 +74,9 @@ public class GameInventory : MonoBehaviour {
                   gameHandler.viewHiddenOn = false;
                   gameHandler.selectedHiddenPower = false;
 
+                  if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVisOff");}
+
                   if (gameHandler.levelPower == "speed") {
                         gameHandler.speedOn = true;
                         if (playerAnim) {
@@ -104,6 +107,9 @@ public class GameInventory : MonoBehaviour {
                         if (playerAnim) {
                         playerAnim.SetTrigger("ColorVisOff");}
                   }
+
+                  if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVis");}
             }
         }
         InventoryDisplay();
