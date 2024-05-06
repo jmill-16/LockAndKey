@@ -1022,11 +1022,11 @@ PrefabInstance:
       objectReference: {fileID: 1401615330}
     - target: {fileID: 4873886062541008382, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: health
-      value: 0
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4873886062541008382, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: maxHealth
-      value: 500
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4873886062541008382, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: itemDrops.Array.size
@@ -2361,6 +2361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2635706108933063309, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 624a021c020f4450a907ec46c31f7a91, type: 3}
     - target: {fileID: 6333677894577732796, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
       propertyPath: m_Name
       value: KeyDoorCanvas

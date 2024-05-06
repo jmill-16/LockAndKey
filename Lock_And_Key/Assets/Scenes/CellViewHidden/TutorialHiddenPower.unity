@@ -792,6 +792,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2635706108933063309, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 881282398f651441a92d15fc9cac7df4, type: 3}
     - target: {fileID: 6333677894577732796, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
       propertyPath: m_Name
       value: KeyDoorCanvas

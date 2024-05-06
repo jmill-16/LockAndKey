@@ -3450,6 +3450,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2635706108933063309, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ceebc522b45d14f4686f2e2b65869ee5, type: 3}
     - target: {fileID: 6333677894577732796, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
       propertyPath: m_Name
       value: KeyDoorCanvas
@@ -38559,6 +38563,10 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 170870703881459325, guid: 41d18793d6b2a4ce8ab353210fbdc22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ceebc522b45d14f4686f2e2b65869ee5, type: 3}
     - target: {fileID: 170870703881459325, guid: 41d18793d6b2a4ce8ab353210fbdc22a, type: 3}
       propertyPath: m_SortingOrder
       value: 10

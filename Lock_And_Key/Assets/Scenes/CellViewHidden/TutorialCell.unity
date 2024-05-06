@@ -382,6 +382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 2474115940848487399, guid: 3b6178ed5fc6849d18d2ca5edc277382, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5683180779877293881, guid: 3b6178ed5fc6849d18d2ca5edc277382, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4301,6 +4305,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2635706108933063309, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5e68958e6c86f4339a1b9a6c00c9afcd, type: 3}
     - target: {fileID: 6333677894577732796, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
       propertyPath: m_Name
       value: KeyDoorCanvas

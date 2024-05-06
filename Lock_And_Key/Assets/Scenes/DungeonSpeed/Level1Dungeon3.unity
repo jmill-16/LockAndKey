@@ -13204,6 +13204,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2635706108933063309, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: efada6100edff4ec0af1c44d3e14a0d1, type: 3}
     - target: {fileID: 6333677894577732796, guid: be4be65f0f09b48448a2c9d566ba8414, type: 3}
       propertyPath: m_Name
       value: KeyDoorCanvas
@@ -120329,6 +120333,10 @@ PrefabInstance:
       propertyPath: keyToDoor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8756717706993140594, guid: 1419ea079714d4957b8f95d53a7bca00, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: efada6100edff4ec0af1c44d3e14a0d1, type: 3}
     - target: {fileID: 8924587663396343418, guid: 1419ea079714d4957b8f95d53a7bca00, type: 3}
       propertyPath: m_Name
       value: HandleHidden (1)
