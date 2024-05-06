@@ -1022,11 +1022,11 @@ PrefabInstance:
       objectReference: {fileID: 1401615330}
     - target: {fileID: 4873886062541008382, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: health
-      value: 400
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4873886062541008382, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: maxHealth
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4873886062541008382, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: itemDrops.Array.size
@@ -1035,7 +1035,7 @@ PrefabInstance:
     - target: {fileID: 4873886062541008382, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: itemDrops.Array.data[0]
       value: 
-      objectReference: {fileID: 3414784434799507348, guid: 41d18793d6b2a4ce8ab353210fbdc22a, type: 3}
+      objectReference: {fileID: 4657499059597433910, guid: 2d819eebd1a1d4f689a37bf96bd2accc, type: 3}
     - target: {fileID: 5659012962843950295, guid: 9a5adef3da4bbb6479c8f236c0bbef86, type: 3}
       propertyPath: pointA
       value: 
@@ -2189,7 +2189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8603926746787331706, guid: 156386ab044429e459608f1333aa1941, type: 3}
   firePoint: {fileID: 1744126897}
-  projectileSpeed: 10
+  projectileSpeed: 15
   shootTime: 0.5
   shootCounter: 0
 --- !u!1001 &1402567530
