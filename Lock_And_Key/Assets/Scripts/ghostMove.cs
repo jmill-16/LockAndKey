@@ -38,9 +38,9 @@ public class ghostMove : MonoBehaviour {
        }
 
        void Update () {
-              float DistToPlayer = Vector3.Distance(transform.position, target.position);
-
-              if ((target != null) && (DistToPlayer <= attackRange)){
+              if (target != null) {
+                float DistToPlayer = Vector3.Distance(transform.position, target.position);
+                if ((target != null) && (DistToPlayer <= attackRange)){
                     transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
                     //anim.SetBool("Walk", true);
                     //flip enemy to face player direction. Wrong direction? Swap the * -1.
@@ -49,7 +49,10 @@ public class ghostMove : MonoBehaviour {
                     } else {
                                     renderer.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
                     }
+                 }
               }
+
+              
                //else { anim.SetBool("Walk", false);}
        }
 
