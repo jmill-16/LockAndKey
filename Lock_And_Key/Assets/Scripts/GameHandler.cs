@@ -150,6 +150,16 @@ public class GameHandler : MonoBehaviour
         SceneManager.LoadScene("DungeonBoss");
     }
 
+    public void ToBoss2(){
+        TransitionTrigger();
+        SceneManager.LoadScene("Level2Boss");
+    }
+
+    public void ToBoss3(){
+        TransitionTrigger();
+        SceneManager.LoadScene("GardenBoss");
+    }
+
     public void QuitGame() {
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
