@@ -270,4 +270,141 @@ public class GameInventory : MonoBehaviour {
             // item5num = 0; // object name
       }
 
+      /*
+
+      if (Input.GetKeyDown("u") && secondpoweravail) {
+            if (gameHandler.selectedHiddenPower) {
+                  gameHandler.viewHiddenOn = false;
+                  gameHandler.selectedHiddenPower = false;
+
+                  if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVisOff");}
+
+                  if (gameHandler.levelPower == "speed") {
+                        gameHandler.speedOn = true;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("SpeedOn");}
+                  } else if (gameHandler.levelPower == "reversegravity") {
+                        gameHandler.reverseGravityOn = true;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("FlipGrav");}
+                  } else if (gameHandler.levelPower == "colorview") {
+                        gameHandler.viewPurpleOn = true;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVis");}
+                  }
+            } else {
+                  gameHandler.viewHiddenOn = true;
+                  gameHandler.selectedHiddenPower = true;
+
+                  if (gameHandler.levelPower == "speed") {
+                        gameHandler.speedOn = false;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("SpeedOn");}
+                  } else if (gameHandler.levelPower == "reversegravity") {
+                        gameHandler.reverseGravityOn = false;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("FlipGravOff");}
+                  } else if (gameHandler.levelPower == "colorview") {
+                        gameHandler.viewPurpleOn = false;
+                        if (playerAnim) {
+                        playerAnim.SetTrigger("ColorVisOff");}
+                  }
+*/
+
+
+      public void clickViewHidden() {
+            Debug.Log("clicked view hidden");
+            if (!gameHandler.selectedHiddenPower) {
+                  gameHandler.viewHiddenOn = true;
+                  gameHandler.selectedHiddenPower = true;
+
+                  if (secondpoweravail) {
+                        if (gameHandler.levelPower == "speed") {
+                              gameHandler.speedOn = false;
+                              if (playerAnim) {
+                                    playerAnim.SetTrigger("SpeedOn");}
+                        } else if (gameHandler.levelPower == "reversegravity") {
+                              gameHandler.reverseGravityOn = false;
+                              if (playerAnim) {
+                                    playerAnim.SetTrigger("FlipGravOff");}
+                        } else if (gameHandler.levelPower == "colorview") {
+                              gameHandler.viewPurpleOn = false;
+                              if (playerAnim) {
+                                    playerAnim.SetTrigger("ColorVisOff");}
+                        }
+                  }
+            } else {
+                  gameHandler.viewHiddenOn = !gameHandler.viewHiddenOn;
+                  if (playerAnim) {
+                        if (gameHandler.viewHiddenOn) {
+                              playerAnim.SetTrigger("ColorVis");
+                        }
+                        else {
+                              Debug.Log("turn off");
+                              playerAnim.SetTrigger("ColorVisOff");
+                        }
+                  }
+            }
+      }
+
+      public void clickSecondPower() {
+            Debug.Log("clicked second power");
+            if (secondpoweravail) {
+
+                  //switch from first to second power
+                  if (gameHandler.selectedHiddenPower) {
+                        gameHandler.viewHiddenOn = false;
+                        gameHandler.selectedHiddenPower = false;
+
+                        if (playerAnim) {
+                              playerAnim.SetTrigger("ColorVisOff");}
+
+                        if (gameHandler.levelPower == "speed") {
+                              gameHandler.speedOn = true;
+                              if (playerAnim) {
+                              playerAnim.SetTrigger("SpeedOn");}
+                        } else if (gameHandler.levelPower == "reversegravity") {
+                              gameHandler.reverseGravityOn = true;
+                              if (playerAnim) {
+                              playerAnim.SetTrigger("FlipGrav");}
+                        } else if (gameHandler.levelPower == "colorview") {
+                              gameHandler.viewPurpleOn = true;
+                              if (playerAnim) {
+                              playerAnim.SetTrigger("ColorVis");}
+                        }
+                  // toggle second power
+                  } else {
+                        if (gameHandler.levelPower == "speed") {
+                              gameHandler.speedOn = !gameHandler.speedOn;
+                              if (playerAnim) {
+                                    playerAnim.SetTrigger("SpeedOn");}
+                        } else if (gameHandler.levelPower == "reversegravity") {
+                              if (gameHandler.reverseGravityOn) {
+                                    gameHandler.reverseGravityOn = false;
+                                    if (playerAnim) {
+                                    playerAnim.SetTrigger("FlipGravOff");}
+                              } else {
+                                    gameHandler.reverseGravityOn = true;
+                                    if (playerAnim) {
+                                    playerAnim.SetTrigger("FlipGrav");}
+                              }
+                        } else if (gameHandler.levelPower == "colorview") {
+                              if (gameHandler.viewPurpleOn) {
+                                    gameHandler.viewPurpleOn = false;
+                                    if (playerAnim) {
+                                    playerAnim.SetTrigger("ColorVisOff");}
+                              } else {
+                                    gameHandler.viewPurpleOn = true;
+                                    if (playerAnim) {
+                                    playerAnim.SetTrigger("ColorVis");}
+                              }
+                              //viewPurpleOn = !viewPurpleOn;
+                              //Debug.Log("viewpurple: " + viewPurpleOn);
+
+                        }
+                  }
+            }
+      }
+
 }

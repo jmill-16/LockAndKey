@@ -7492,6 +7492,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1945051789}
     m_Modifications:
+    - target: {fileID: 1390857560565613886, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 923279668}
+    - target: {fileID: 1390857560565613886, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: clickViewHidden
+      objectReference: {fileID: 0}
     - target: {fileID: 4383350998402280544, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
       propertyPath: m_IsActive
       value: 0

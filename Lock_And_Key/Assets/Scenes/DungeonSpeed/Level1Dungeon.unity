@@ -672,6 +672,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 0}
   canvaskeyicon: {fileID: 469758875}
+--- !u!114 &243876109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 246276601546081598, guid: 0e9b9e16abf85486e83cf674103047c5, type: 3}
+  m_PrefabInstance: {fileID: 243876104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243876105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26efae437d1a34069a8207ab259333a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &249628711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,6 +1955,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cd66ab923ad7a42bcbd9777cdbb88e7b, type: 3}
+    - target: {fileID: 1390857560565613886, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 243876109}
+    - target: {fileID: 1390857560565613886, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: clickViewHidden
+      objectReference: {fileID: 0}
     - target: {fileID: 4551545693782997628, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2027,6 +2046,14 @@ PrefabInstance:
     - target: {fileID: 4551545693782997628, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206434371686473009, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 243876109}
+    - target: {fileID: 7206434371686473009, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: clickSecondPower
       objectReference: {fileID: 0}
     - target: {fileID: 9016541971033387335, guid: c126b7ce00548496c99f31233ab729bb, type: 3}
       propertyPath: m_Name
