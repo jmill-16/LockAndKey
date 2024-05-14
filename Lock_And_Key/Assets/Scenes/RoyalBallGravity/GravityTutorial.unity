@@ -37769,6 +37769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBoxTemplate
       objectReference: {fileID: 0}
+    - target: {fileID: 2927108254277544928, guid: 69a83b26d87704941a61593793f3d5af, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3140659345107678955, guid: 69a83b26d87704941a61593793f3d5af, type: 3}
       propertyPath: textSpeed
       value: 0.05
